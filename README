@@ -1,0 +1,33 @@
+$Id: README 103 2010-11-04 10:04:43Z s242720-studenti $
+
+Folder meanings
+________________________________________________________________
+
+index.php
+
+  Entry point to the application, just includes the main.php file into
+  the server/ folder
+
+server/
+
+  Server side code
+
+client/
+
+  Client side code
+
+images/
+
+  Static images used into the application
+
+style/
+
+  Style sheets
+
+data/
+
+  Data files used by the server side code to store the application
+  state. The position of this files can be configurated by the
+  configuration.php file into the server/ folder. The web server has
+  to create and modify files under this directory, so it should have
+  the ownership on all this filesystem branch.

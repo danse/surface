@@ -1,0 +1,41 @@
+$Id: README 106 2010-11-05 17:11:34Z s242720-studenti $
+
+All files but configuration.php will be concatenated by the Makefile
+into a single php file (server.php) to ease uploading to webservers
+
+File Contents:
+________________________________________________________________
+
+configuration.php
+
+  Configuration variables (into the form of php variables) to be used
+  by the administrator
+
+main.php
+
+  The main entry point to the server, where different request types
+  are paired with the right functions (often, one function accessing
+  the database and one function to print the output) with a big switch
+  
+updates.php
+
+  All functions that touch the database (that means the various text
+  files keeping the server side of the application state) are here.
+
+file_access.php
+
+  This file is used only by functions into update.php; it contains
+  functions to read and write the database files, locking them.
+
+markup_send.php
+
+  Contains all functions for html and xml output
+
+draw_image.php
+
+  Contains the function draw_image, called into the main switch
+
+fpdf.php
+
+  Imported by draw_image.php, provides functions to draw a vectorial
+  pdf

@@ -1,0 +1,44 @@
+# $Id: README 129 2010-12-01 16:58:16Z s242720-studenti $
+
+This directory contains documentation about the application.
+
+The guides are written using the "rst" markup language documented at
+http://docutils.sourceforge.net/rst.html
+
+To generate html or other formats you need to use the docutils scripts
+like 'rst2html' or 'rst2latex'. These are included into the port
+py26-docutils for FreeBSD and into the package python-docutils for
+Ubuntu. They require that python 2.3 or later is installed on your
+system.
+
+Once docutils is present on your system, you can type 'make' to build
+the documentation using the included GNU makefile (this is necessary
+only after you change the .rst source files)
+________________________________________________________________
+Files:
+
+developer_guide.rst
+user_guide.rst
+administrator_guide.rst
+guide_style.css
+  The three guides that contain all the documentation, and a
+  stylesheet to format the resulting html files
+
+images/
+  directory for the images included by the guides
+
+notes/
+  Incomplete pieces of documentation collected during the
+  developement, to be integrated with the paper notes and to be
+  organized into the various guides
+
+testcases/
+  Some test cases that were useful to investigate svgweb's behavior,
+  kept here for reference
+  
+Makefile
+  A GNU makefile to build the doc
+
+check_mimetype/
+  directory with tool to verify the correct configuration of the
+  webserver (see the administrator guide)

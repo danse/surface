@@ -1,0 +1,1174 @@
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Developer guide
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+.. contents::
+    :depth: 3
+
+Main principle
+________________________________________________________________
+
+The leading idea behind the application is a lightweight interaction
+model which, combined with the capabilities of vector graphics, allows
+to support a shared whiteboard through the exchange of few textual
+messages.
+
+The textual representation of vector graphics is common knowledge, and
+is easy to understand how this can enable to transmit graphic data
+with short communication messages (although in some cases this
+advantage may fail). I will focus now on the overall sharing model,
+thought to provide each client with an updated state of the
+whiteboard.
+
+The fundamental event that triggers the evolution of the application,
+is an user **action**, that is a change on the user whiteboard that is
+supposed to be propagated to all other clients. To mantain an updated
+state, the actions get propagated one by one when executed, even if
+some of them could nullify the effect of some others (like for a
+deletion of a created object).
+
+Each **action** is represented by a textual **update** which contains
+all relevant informations about what the user did. The main purpose of
+the server side of the application is to manage the distribution of
+these updates.
+
+The web technology prevents the client side code to directly
+communicate with other clients, so an extern server is
+compulsory. Moreover, the same technology prevents the clients to
+directly receive updates in a *push* manner (websockets in html5 are
+going to provide push methods to client in the future), so a server is
+needed to provide updates in response of *pull* requests (see
+`Emulating a client push behavior with the http technology`_ for
+performance details).
+
+So the server role is to manage an **update database** so that each
+client can ask for new updates, depending on his own state. With the
+access to a writable storage device, that is very common even on the
+smallest web servers, the server can manage a bigger update database,
+and mantain all the state of a whiteboard, since its creation, in this
+action-oriented form.
+
+The following image illustrates a simple case of update
+management. Here you can immediately see some important elements that
+constitute the application's internals:
+
+- The **update database**, that is the main data structure on the
+  server
+
+- The two principal requests made from the clients to the server, that
+  are the **read** and the **write** requests
+
+.. image:: images/base_principle.png
+
+The update is sent, usually, when the user terminates an operation, be
+that a move, create or edit action. Then the update is sent to the
+server (this is a request with the ``mode`` parameter set to
+``write``), which gives it a numerical incremental identificator and
+adds it to the database. At the same time, several clients are asking
+for updates sending a request with ``mode`` set to ``read``, including
+the identificator of the next update which they are interested in.
+
+Elements involved
+................................................................
+
+In this case, the main parts of the software which are running are:
+
+- for the addition of a new update, the global **sender** object
+  (``g['sender']``) on the client side and the ``write`` **mode** on the
+  server side
+
+- for the request about new updates, the global **receiver** object
+  (``g['receiver']``) on the client side and the ``read`` **mode** on the
+  server side
+
+Server ``mode`` parameter
+................................................................
+
+I mentioned above the server's ``mode`` parameter, this is the main
+query field determining the kind of the server's response.
+
+The server side code is structured following a functional programming
+paradigm, on the purpose of making the execution flow as clear as
+possible. We have the two certain boundaries of this flow, that are
+the start by a user request, and the end by a response to the user, so
+the different server behaviors are conceived like parallel ways on the
+same path, in a few words they are the branches of a big ``switch``
+control structure, and the ``mode`` parameter is the one that
+determines which way will be taken. Take a look at the ``main.php``
+file to easily verify what explained.
+
+Principal division of the application
+................................................................
+
+The main elements constituting the application's structure are:
+
+- Client side code (``client/`` directory)
+- Server side code (``server/`` directory)
+- Stored data (``data/`` directory)
+
+All of them reside on the webserver, in a form optimized by the
+makefile, but their original structure is intended to help a developer
+to move through the code and clearly understand what is being done.  I
+will write here about the server side and client side code, while for
+the form of the stored data see the section `Stored data`_ under `Data
+structures`_.
+
+The client and server side of the source code are documented into the
+following section, `Code structure`_, while the data are documented
+into `Data structures`_, together with the meaning of complex
+variables used into the code.
+
+Code structure
+________________________________________________________________
+
+In this section I will present the main structures thought to organize
+the code. The order of the following subsections reflects the
+importance of each topic. The first two subsections deal with those
+structures limited to the client or the server side, while the
+following sections present topics which involve both sides of the
+application.
+
+Client side
+................................................................
+
+Following a general rule of network protocols, I've tried to move the
+biggest part of the computational load towards the network boundaries,
+that means towards clients, leaving it off from the server.
+
+Current hardware performances for an average web browser aren't an
+heavy limit for this kind (strongly interactive) of applications, or
+at least I couldn't observe any performance problem related to
+javascript on the testing machine (and virtual machine), which runs on
+quite old hardware (see `Testing environment and methods`_).
+
+The biggest problem I met was therefore that of readability and
+decomposition of the client side code.
+
+The starting code was all based on global variables, and I choosed to
+proceed by steps, instead of trowing away the existing structure. The
+resulting code has an hybrid programming paradigm, being object
+oriented just in some of his parts [#client_rewrite]_.
+
+The javascript code is divided among files in a way that follows the
+graphical division of the user interface, as shown in the image below:
+
+.. image:: images/client_surface.png
+
+The javascript function definitions can be found on the file
+corresponding to the zone of the page containing the html element to
+which the method is associated. For example, this html code can be
+read about the "Import" button, which is contained into the menu::
+
+    <button onclick="show_div('menu_import', true)">Import</button>
+
+Since the "Import" button is contained into the menu, the programmer
+will find the ``show_div`` function declaration inside menu.js.
+
+Another consequence of the shown division is that there are two
+javascript files, ``login.js`` and ``application.js``, which are
+associated to a whole html page. Thus the initialization functions for
+each page are contained into the corresponding file; see above for
+details about the one contained in ``whiteboard.js``, which is the
+more complex.
+
+To be complete, it's better to immediately consider another image
+which introduces also those javascript files not directly associated
+to a visible surface of the user interface. The image illustrate the
+use relationships between the javascript files, a very useful
+information while browsing the code:
+
+.. image:: images/client_file_use.png
+
+An arrow from a start file to an end file means that the code of the
+start file calls some functions which are defined into the end
+file. Two new informations come from the structure of the diagram:
+
+- the role of ``common.js`` that is like a little shared library for
+  common tasks (the most important thing, it contains the channel
+  class)
+
+- the presence of the ``shapes.js`` file (containing the shape class
+  and all shape objects derived from that), which is used exclusively
+  by functions into ``whiteboard.js``
+
+The introduced division of client side code it not totally rigid,
+there are still dependencies, here and there, between variables
+defined into different files. I've tried to collect into common.js the
+variables, functions and objects used by several files, like the
+global object ``g`` holding all global variables, and the ``channel``
+and ``signer`` objects.
+
+Dispatching the execution flow through the files
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+On the purpose of decomposing the client logic, also global variables
+are defined within the files where they are used. When the client side
+state is initialized, several functions are called, each one to
+initialize the variables belonging to a file.
+
+The main initialization function is defined into ``application.js``;
+it initializes the variables defined into ``application.js`` and than
+calls the initialization functions for the file ``whiteboard.js`` and
+``menu.js``: ::
+
+    window.onsvgload = function() {
+        ...
+        initWhiteboard();
+        initMenu();
+        ...
+    };
+
+A similar approach is used when an update is received by the
+client. The ``receiver_handler`` function (into ``application.js``)
+calls the specific functions belonging the the files ``whiteboard.js``
+and ``chat.js``, since within those files the developer will found all
+functions needed to process the update of the right type: ::
+
+    function receiver_handler(){
+        ...
+        if (action == 'chat')
+            chatServerUpdate(madeBy, objId, parameters, time);
+        else{
+            ...
+            whiteboardServerUpdate(objId, page, action, parameters);
+            }
+        ...
+    }
+
+Note that the approach used for the initialization and for the
+processing of an update is a total waste of resources, from the
+computational point of wiew. It is just an effort to organize the code
+for the developer.
+
+Object implementation on the client side
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+The javascript language is very flexible when it comes to object or
+class definition, due to his prototypal model and the possibility of
+dynamicall add member functions and internal variables to the
+objects. Although an uniform programming style is important for
+readability and to avoid mistakes, the few javascript objects are
+defined in different ways, which I will explain shortly.
+
+All the objects that will be created dynamically (``line``, ``circle``
+and all the shapes, and the ``shape`` and ``channel`` classes) are
+defined through their constructors, while permanent singleton objects
+(``g['signer']``, ``g['sender']``, ``g['receiver']``, ``g['pages']``
+and ``g['size_adapter']``) are directly built and assigned to the
+global variable where they will remain.
+
+The channel class
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+The channel class provides an ajax channel to the server, with some
+functions to send the request, handle errors, and retry the request
+after a timeout. A channel object is contained (and used) by all other
+objects which need to exchange data with the server in an asynchronous
+manner.
+
+.. image:: images/Channel_use_diagram.png
+
+The responsabilities of the channel class are:
+
+ - Create, send and receive an ajax request in a way which is
+   supported cross-browser
+
+ - Handle the case of timeout of the sent request, sending again the
+   same request
+
+The send of ajax requests is used by the ``login`` and ``sender``
+objects to send individual messages, while it is used by the
+``receiver`` and ``signer`` objects to send messages in a cycle.
+
+The structure of objects using ``channel`` is a little messy, because
+the channel object needs methods which are exposed on the global
+scope, in order to assign them as handlers for timeout and ajax
+statechange events. For example, the ``g['sender']`` object defines
+two global methods that are assigned to the channel object during its
+initialization (code taken from ``application.js``): ::
+
+    // Sender initialization
+    g['sender'].channel =
+        createChannel(sender_handler, sender_timeout, 10000, send_par);
+
+    // Sender object and methods
+    g['sender'] = {
+        ...
+    };
+    function sender_timeout(){
+        g['sender'].channel.handle_timeout();
+    }
+    function sender_handler(){
+        ...
+    }
+
+The methods must be defined outside of the object, which is not very
+elegant, but it is the only way. Moreover, you can observe that the
+``sender_timeout`` method just calls a method into the channel
+object. This is even less elegant and this is done by all objects that
+use a channel object, because it is difficult in javascript to assign
+an inner method of an object as handler for the timeout event.
+
+The shape class
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+The **shape** class has came from the attempt to simplify the code
+running into the whiteboard. This class is used only through its
+derived classes (it can be seen as an abstract class or an interface)
+and by the functions into the file ``whiteboard.js``.
+
+.. image:: images/Shape_derivation_diagram.png
+
+The shape class has mainly three virtual methods (mousedown,
+mousemove, mouseup), which must be overwritten by the derived shapes,
+even if the language syntax doesn't provides any keywork to indicate
+virtual methods.
+
+The idea behind this class, is that when an user chooses a tool that
+corresponds to a shape, all mouse (and even keyboard) actions inside
+the canvas get forwarded to the corresponding shape class, and the
+class decides how to handle the mousedown, mousemove, and mouseup
+events. This structure aims to achieve both modularity and flexibility
+in the definition of classes.
+
+The other shape methods are mostly protected, since they are intended
+to be used by the derived classes. These methods try to collect most
+of the logic which is common between all classes, so they perform
+operations like:
+
+ - Create or retrieve the group containing a shape
+
+ - Send the shape attributes to the server as an update, or read an
+   update from the server setting the shape attributes
+
+ - Manage the text area for shapes that require a text input from the
+   user
+
+For example, the method ``end_shape`` reads the shape attributes and
+packs them to an update to be sent to the server: ::
+
+        for(a in this.att)
+            params.push(this.element.getAttribute(this.att[a]));
+        // Add the element in the array that will be sent to the server.
+        sender_add(this.type, params, this.id);
+
+Many of the derived classes use this methods to perform common
+operations, but some of them can override the methods if they need a
+special treatment. For example, the class polygon overrides the
+``end_shape`` function: ::
+
+    // Due to chrome's different point syntax, end_shape must be
+    // overriden
+    object.end_shape = function(){
+        ...
+
+The idea which simplify the code but also makes it less flexible, is
+the use of the ``att`` variable, which contains the attributes which
+are useful *into the SVG* definition of the shape. This attribute list
+is used to copy the attributes, for example, from the SVG shape to the
+server, from the server to the SVG shape. Another use case is to copy
+attribute values from the SVG shape to the object and than again to a
+new SVG shape, when editing a shape.
+
+Another important variable is the ``edit`` flag, which is activated
+upstream by the ``whiteboard.js`` code, and which changes completely
+the behavior that the shapes take when they react to mouse events.
+
+Concurrency
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Even if I couldn't find a clear specification of the behavior of the
+javascript language with respect to concurrency, from several articles
+found on the web and from the practice it results that javascript
+doesn't supports preemption, thus an event is handled after that the
+current block has ended.
+
+To avoid concurrency problems, is thus necessary to mantain the
+coherence of global variables within each function that changes
+them. This is easier for the new parts of the code which are
+structured following the object oriented paradigm.
+
+Sometimes (``sender_handler`` function inside ``application.js``,
+``login_handler`` function inside ``login.js``) when receiving an ajax
+response from the server, the underlying datas are checked, to be sure
+that the response is still valid or to know if a new request should be
+sent.
+
+Server side
+................................................................
+
+The server side is decomposed following a procedural paradigm, which I
+think is better to describe the control flow in this case. However, to
+reduce the complexity of function interfaces, some of their parameters
+can be structured and hold several values inside an associative array
+(see `Server structured variables`_).
+
+The choice of a procedural decomposition came from the consideration
+that the server code doesn't actually mantains much state, but instead
+the whole logic is started with each user request and ends with a
+response to that user, changing eventually the database as an
+important side effect.
+
+The main switch
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+The execution flow is described in its principal steps into the
+``main()`` function, where I tried to balance the readability (that
+means hiding the code by incapsulation) with the expression of the
+underlying logic.
+
+To achieve this goal, there is a separation of functions into groups,
+and the structures into ``main()`` do the association between the user
+request and the corresponding functions.
+
+Function grouping into files
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+The function used by ``main()`` are mainly grouped into two types:
+
+ - modifying the database (file ``updates.php``)
+ - formatting the output (file ``markup_send.php``)
+
+updates.php
+
+  The functions that modify the database are all defined into
+  ``udpates.php``, so that the database structure is somehow
+  encapsulated into this file. The file contains the functions called
+  by ``main()``, but it contains also functions called just
+  internally, and defined because they are called in different places
+  or to improve the readability
+
+markup_send.php
+
+  Here, all the functions that write HTML or XML are defined, to wrap
+  the data received upstream by ``main()``, and to send them to the
+  user.
+
+Sometimes, this division turns into an excessive rigidity, and
+sometimes (in the case of ``export_chat``) a function into updates.php
+also cares for formatting, but this remains a guideline into the
+structure of the server side code.
+
+Steps for the server response
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+The presented function groups correspond also with two steps of the
+server operation, and so they can be found used into two successive
+switches inside ``main()``: a firs one based on the ``mode`` parameter
+that chooses among which *update* function to use, and a second one
+based on the ``$o['type']`` (output type) parameter that chooses among
+which *markup send* function to use[#database_double_access]_.
+
+The *markup send* step is born to collect formatting functions that
+were common between several *modes*, so the output functions for the
+``export`` mode remain outside from this step: they stay into the
+``export`` branch of the *update* switch, since they are used just
+there. The ``export`` mode is quite different from the others, and the
+`Export mode and draw_image`_ section covers its characteristics.
+
+The client identifier
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+The drawback of a procedural decomposition paradigm is that many
+functions belonging to the same processing step could require the same
+data set, resulting in big and redundant function interfaces. For
+example, the functions belonging to the *update* step often need
+informations about the user which sent the request, his user id (to
+improve performances reducing database search), and the name of the
+whiteboard where he is operating.
+
+I packed all these variables into the variable ``$client_id``, which
+is a parameter of all the functions of the *update* step. The variable
+is sent by the client or produced by the ``login`` function in the
+form of a joined array with the structure: ::
+
+    <user id> . '_' . <user name> . '_' . <whiteboard name>
+
+And it is parsed by ``parse_client_id`` to provide textual keys to the
+functions.
+
+Export mode and draw_image
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+This mode deserves a specific coverage, because is more complex than
+all the other methods and requires a whole file (``draw_image.php``)
+just to accomplish the operations required to export the whiteboard
+contents.
+
+The complexity arises from two factors:
+
+Database structure
+
+    The server doesn't actually sees the current state of the
+    whiteboard, but it simply keeps the received updates. Thus, only
+    for this mode, it must walk through the whole database and
+    transform the update list into a structure reflecting the status
+    (the ``$objects`` variable). This task has been incapsulated into
+    the ``export_whiteboard`` function (``updates.php``).
+
+Format encoding
+
+    A change from one format to another, which is simple a matter of
+    changing a form value for the user, entails whole sets of
+    different operation into the server side code, since the functions
+    may change for each object type. This task has been incapsulated
+    into the ``draw_image`` function (``draw_image.php``).
+
+The ``export_whiteboard`` function does also all operations which will
+be useful for every kind of export format, for example it parses
+complex action parameters and it translates the sizes from global
+units to local units (see `Global and local measure units`_); this
+makes the two tasks (the production of the ``$objects`` variable and
+its output as a file for the user) tightly coupled but the division
+between them seems reasonable to me to organize the code.
+
+All the code for the export mode is strongly dependent by the position
+of the parameters into each update string. This is a problem for
+readability and maintainability, that I discuss into `Joined array for
+the action parameters`_, where I introduce some ideas to change the
+current structure.
+
+Now that this mode has been presented, I can show the full use diagram
+between server side files, including even those files which are
+secondary and related to this specific mode:
+
+.. image:: images/server_file_use_full.png
+
+Cuncurrency
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+On the server side, cuncurrency problems arise in the acces to the
+shared files on the disk and the management of the cuncurrency is
+demanded to the functions defined into ``file_access.php``.
+
+
+
+Global variables directly sent from the server to the client
+................................................................
+
+There is an amount of client-side global variables that must be sent
+by the server side code. These are usually variables depending on the
+specific user or on the specific session, so they may change each time
+an user makes a new login.
+
+There is a sort of channel, a way of transmission of all these
+variables from the (server side) database record for the specific user
+to the client side global scope.
+
+the variables are read from the database record into ``updates.php``
+by the following function: ::
+
+    function get_user_vars($c){
+        ...
+        $user_d = $d['uids'][$user_id];
+        $vars = array();
+        $common = array('client_id', 'side_w', 'slides', 'width', 'height');
+        foreach($common as $key)
+            $vars[$key] = $user_d[$key];
+        $vars['user'] = $user_d['username'];
+        $vars['user_id'] = $user_id;
+        $vars['obj_prefix'] = $user_id.'_'.$user_d['session_id'];
+        ...
+        return $vars;
+    }
+
+Some variables are directly read, some others must be built. Inside
+``main.php``, before sending the application page to the user, the
+function is called: ::
+
+    app_page_send(get_user_vars($client_id), $o['content']);
+
+Inside ``app_page_send`` (defined into ``markup_send.php``), the
+variables are encoded like input fields into an hidden form: ::
+
+             <!-- Client side session variables read by init() into common.js -->
+             <div class="hidden">
+               <form id="session_datas">';
+    foreach ($client_vars as $name=>$value)
+        $content .= '
+                 <input type="hidden" name="'.$name.'" value="'.$value.'">';
+    $content .= '
+               </form>
+             </div>';
+
+Finally, during the client-side initialization of the application page
+(function ``onsvgload`` into ``application.js``), these variables get
+read and exposed on the global scope, into the ``g`` object which
+holds all global variables and objects: ::
+
+    // Get client-side variables from server-side ones embedded into
+    // document nodes
+    var server_vars = ['user', 'client_id', 'width', 'height', 'svg_w', 'svg_h',
+                       'slides', 'user_id', 'obj_prefix'];
+    var form = getById('session_datas');
+    for(v in server_vars)
+        g[server_vars[v]] = form[server_vars[v]].value;
+
+Note that, through the path from the database to the client side, some
+variables have been deleted (they was useful just for the server), and
+others have been added. For examples, ``svg_w`` and ``svg_h`` are
+computed from user data and from the layout constants, which could be
+changed by the administrator through the configuration file. This
+channel is thus useful also to send server-side configuration
+variables on the client side; for example, it would be easy to unify
+the server side ``debug`` configuration variable with the client side
+one.
+
+Global and local measure units
+................................................................
+
+At one point of the project, it was decided that all users should see
+the same content on the whiteboard, regardless of the actual sizes in
+pixes of each own's whiteboard.
+
+To accomplish this, the size and position of each object is expressed,
+on the server side, with a "global" measure unit, that gets translated
+to pixels just before the objects are drawn on the client. Also the
+action of create, move or edit a shape on a client must translate the
+local pixel units into global measure units.
+
+The definition of the global unit is as such: the whiteboard's width
+and height are always of 100 global units. So each point within the
+canvas has an abscissa and an ordinate which ranges from 0 to 100,
+when expressed in global units, and every distance into the whiteboard
+can be translated from local to global units and vice-versa with
+simple proportions, knowing the sizes of the local canvas.
+
+Currently, the resize is incomplete, since the circles aren't
+translated to ellipses, and since the aspect ration of images into the
+SVG isn't changed. Also the text size isn't changed.
+
+The translation of measure units is demanded to the client-side object
+``g['size_adapter']`` object, which is like a filter for all updates
+regarding the whiteboard:
+
+.. image:: images/size_adapter.png
+
+Security measures
+................................................................
+
+Some weak security measures were taken, just to discourage users to
+try to stole the identity of other users, but the taken measures
+present several limits so they are intended to provide a reduced level
+of security, suitable for an informal use environment, where the trust
+isn't a problem, and where the possible damage done by an attacker is
+reduced.
+
+The main security measure is to not send the plain text form of the
+user password with each request, but instead to *sign* each request
+with the user password on the client side, so that the server can use
+his stored password to verify the signature.
+
+This is accomplished by the ``g['signer']`` object on the client side,
+and by the ``verify_credentials`` function on the server side. This
+kind of signature get done just for those modes which require an
+authentication, which are defined into the ``$known_modes``
+array. Both the ``$known_modes`` array and the use of
+``verify_credentials`` function can be found into the ``main.php``
+file.
+
+The only moment when the password get transmitted in plain text form
+through the http channel is when the user registers himself,
+associating that password with his name.
+
+Reply attack
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+This kind of security mechanism is prone to a reply attack, because
+the signed part of the request is the same for different requests. To
+reduce this problem, there is a continuous exchange, between the
+server and the client, of a time-dependent value, which makes requests
+not reusable after a configurable time interval.
+
+.. todo_comment insert details about the server salt and about which variables, server side and client side, rule the entity of the time interval
+
+Other minor concepts
+................................................................
+
+This section contains informations about those parts of the code whose
+presence or structure is not motivated from project requirements or
+design choiches, but from the application of the design ideas to the
+available technology.
+
+Client send buffer and the ``sender`` object
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+The client has a buffer for updates to be sent. The function that adds
+a new update to the buffer (server_add), usually tries to flush the
+buffer right after it's execution. It is defined into the file
+application.js within the ``sender`` object which is derived from the
+channel class, its interface is::
+
+    sender_add(action, parameters, varidObj, async)
+
+All parameters but ``action`` are optional, and the last (``asinc``)
+is useful right to add a new update line into the database without
+trying to flush it. It is used when the user edits a shape, because
+its better if the old shape's deletion and the new shape's creation
+get sent to the server in the same time.
+
+In any case, this buffer is necessary because the sender channel (like
+all other ajax channels derived from the same class) waits that an old
+ajax request has succeeded before sending a new one. When the
+``sender`` object receives a response from the server, it checks its
+buffer for updates collected in the meantime since the request was
+sent.
+
+Here it is the relative code (into application.js) the response
+handler (sender_handler) can call again the send function (line 7)::
+
+     1	function sender_handler(){
+     2	    var response = g['sender'].channel.received();
+     3	    if(response !== false){
+     4	        // If still have data to send (added while waiting the server
+     5	        // response)
+     6	        if (g['sender'].line_buff.length > 0)
+     7	            sender_send();
+     8	    }
+     9	}
+
+Emulating a client *push* behavior with the http technology
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+.. copiata da una subsubsection della tesi intitolata "Readyness
+   without too much network load"
+
+When using a pull update technique, there is a trade-off on the
+frequency of client update requests. Frequent requests improve the
+responsiveness to changes made from other users, but increase the
+network load, and the server and client overhead (although the latter
+is negligible).
+
+In this application, a behavior similar to a pull-like one is achieved
+simply delaying the response send to the client that asked for
+updates. If an updates request comes to the server while no new
+updates are available, the response is delayed by a configurable
+amount of time during which the server process periodically checks the
+presence of new updates, until a new one is found or the number of
+retries becomes too high. After a given number of retries with no new
+updates, the server replies to the client with an empty response.
+
+The cost of this technique is that of a suspended server process for
+each client, that periodically wakes up and opens the database for
+reading.
+
+Here it is a simplified snippet of code taken from the server side
+function 'read', which handles the response to a client update
+request. At lines 4 and 10, ``$newlines_retry`` and ``$newlines_wait``
+are two patameters configurable into the file
+``configuration.php``. ::
+
+     1	function read(... , $id) {
+     2	    ...
+     3	    // wait until we find new ids, or until maximum retry number
+     4	    for ($i = 0; $i < $newlines_retry; $i++) {
+     5	        ...
+     6	        // Read the database and retrieve the latest id
+     7	        $d = file_get($c['wb_file'], 'r');
+     8	        if ($d['next_upd_id'] > $id)
+     9	            break;
+    10	        usleep($newlines_wait);
+    11	        ...
+    12	    }
+    13      // After the cycle, respond with the new lines or an empty response
+
+Data structures
+________________________________________________________________
+
+Stored data
+................................................................
+
+Stored data are those which get wrote on the disk by the server side
+code, into the files choosen through the configurable variables into
+``configuration.php``.
+
+When the configuration variable ``$debug`` is set to ``true``, for
+each file read by the server (function ``file_get``) a readable copy
+of the content is written on the disk, with the suffix "-debug". This
+can help in fixing issues and for a better understanding of data
+structure.
+
+The stored data reside into the ``data/`` folder, even if all position
+can be configured. This image shows the default structure of the data
+folder:
+
+.. image:: images/default_structure_data_folder.png
+
+In the image you can see the folders ``imported`` and ``whiteboards``,
+which get filled and emptied by the server with the creation and
+deletion of new whiteboards. For each whiteboard, a file is created
+into ``private/whiteboards``, while the corresponding folder into
+``imported`` is created just when (and if) an image is actually
+imported.
+
+The files **permissions** and **passwords** are essential for the
+application's operation, so if they are missing they get created
+automatically and filled by the server side code with default
+content. For this reason, the files aren't present into the
+application's distribution (see `Permission file`_ for some
+detail). Also the ``log`` file is created by the first server log
+message.
+
+As you can see, the imported images stay into a public folder, while
+all other data should stay into a private one (although folder's names
+can't actually say which permissions were given to those folders)
+
+Two types of data get stored on the server, which are very different:
+
+- textual data, usually an encoded form of complex php arrays
+- images
+
+the textual data are often a serialized form of php variables, except
+in the case of the permission table (``$permission_file``) which has a
+precise format in order to be easily used from the administrator.
+
+The images are those imported from a pdf file for a user *import*
+request, or those grabbed by the web after a user *image create*
+action. They are deleted by the server when the user requires the
+deletion of the corresponding whiteboard object.
+
+Imported images reside in a folder which is specific for each
+whiteboard. The folder is created when there is the need to import the
+first image (function ``acquire_image`` into ``updates.php``), and
+deleted with all its content when the whiteboard is deleted by an user
+with the right permissions.
+
+Whiteboard database
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+The whiteboard database is the most important data repository for the
+application. It is specific for each whiteboard, so it can be created
+and deleted like whiteboards can be. It contains mainly:
+
+- few variables which are global for the whiteboard (mainly counters)
+- the update database, presented in the initial section `Main principle`_
+- user data relative to the whiteboard, like size customizations
+
+The database is a serialization of a php array whose structure (with
+the correct key names) is the following:
+
+- database
+
+  - ``next_upd_id``: identifier for the next update that will be stored
+  - ``next_usr_id``: identifier for the next user that will join this whiteboard
+
+  - ``next_sess_id``: identifier for the next session, given to the
+    user when he does the log in
+
+  - ``delete_count``: the number of objects deleted since the last cleanup
+
+  - ``updates``: the update database; each update contains the
+    following fields (those with the star \* symbol are added by the
+    server):
+
+     - ``update_id`` \*: it is the key of the update in the database array
+     - ``time`` \*: timestamp when the server added the update
+
+     - ``madeby`` \*: user *name* (not user id) of the user from whom the
+       update came
+     
+     - ``page``
+     - ``objid``: see `Object id`_ under `Joined arrays`_
+     - ``action``
+     - ``parameters``: see `Action parameters`_ under `Joined arrays`_
+
+  - ``uids``: the array of user data pertaining a whiteboard, which is
+    indexed with each user's id
+     
+     - ``username``
+
+     - ``client_id``: a string used by the client to give a unique
+       identifier to created objects (updated on login)
+
+     - ``slides``: the addres that the user has loaded into the iframe
+       panel
+
+     The following two parameters are the layout parameters which a
+     user can personalize, and which must be kept server side because
+     they affect the sizes of the root svg element which can't be
+     modifyed client side. The parameters are set to the default when
+     a new user is created (function register into updates.php)
+
+     - ``width``: total width of the whiteboard
+
+     - ``height``: total height of the whiteboard
+
+     - ``side_w``: width of the right side pane containing the chat
+       and the iframe to external sites
+
+Permission file
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+This file is necessary for the application to run, because it rules
+the behavior of the application when it comes to give to any user the
+permission to do fundamental actions, that are creating, accessing or
+deleting any whiteboard.
+
+It is thought to be manually edited by the application's
+administrator, so it is structured as a "delimited separed values"
+file, with a single space as delimiter. The form of each row must be
+the following: ::
+
+    <user> <whiteboard> <permissions>
+
+Where ``<user>`` and ``<whiteboard>`` can be two regexp, and
+``<permissions>`` is a string composed by the letters `a`, `c`, `d`,
+each one giving, when present, the permission to access, create or
+delete, to the given user regexp on the given whiteboard regexp.
+
+This file is missing into the application package, so the
+administrator can write one by himself. If he doesn't, the server side
+code will create a file with the default rule of allowing everything
+to everyone (see function ``check_permissions`` into
+``file_access.php``), that is a rule like this: ::
+
+    .* .* abc
+
+This file is just read by the short function ``check_permissions``
+into ``file_access.php``, so check out that function to retrieve
+detailed informations, as the use of the library functions ``fgetcsv``
+to read the file and ``ereg`` to evaluate the regular expression.
+
+Password file
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+The structure of the passwords file is very simple, it is read and
+write with the same functions used for the whiteboard databases, in
+order to store a php variable into it. This variable is in the form:
+::
+
+    array("username1" => "password1",
+          "username2" => "password2",
+          "username3" => "password3");
+
+Those passwords are written when each user registers himself (that is
+also the only moment when they go trough the http channel in plain
+text form).
+
+Joined arrays
+................................................................
+
+The whiteboard makes wide use of joined arrays to handle complex data
+structures. This means that an array is translated into a string (with
+a one-character separators between his elements) at one side of the
+transmission, and this string can be split again at the other end,
+where the details of the data structure must be read or changed.
+
+For example, this diagram shows how the parameters and other data
+pertaining a new action get sent to the server, packed with the use
+of ``|``, ``:``, ``;`` separators.
+
+.. image:: images/sending_update_separators.png
+
+Object id
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Each object Id must be unique value into a whiteboard database; it has
+the following structure:
+
+<user id> _ <session id> _ <object counter>
+
+like as "3_35_12"
+
+The user ids start from 1 (see function database_get into
+file_acces.php for database initialization), user id 0 is used by the
+server (function import, file updates.php) to create images from
+imported pdf.
+
+Action parameters
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+The handling of action parameters is quite unconfortable for the
+developer: here I will describe the current state of the code, while
+in the next session I will discuss drawbacks and alternatives to the
+use of joined arrays.
+
+The parameters can change depending on the type of action, and must be
+accessed in a coherent way through all the code. The actual order of
+parameters for an action is decided when the update string is created,
+that is on the client side, in all the places before the
+``sender_add`` function is called.
+
+Shape action
+````````````````````````````````````````````````````````````````
+
+Each shape defines it's list of parameters, wich it will use to read
+updates to the server, to send them, and sometimes to clone an
+existent shape for editing. Here is a snippet of a shape defining its
+attributes: ::
+
+    function line(){
+        var att = ['opacity','stroke-width','x1','y1','x2','y2'];
+
+These definitions must be taken as the reference for the meaning of
+parameters for shape actions (line, path, rect, circle, polygon,
+polyline, etcetera), but remember that the actual index must be
+incremented by two, because each shape has two default attributes
+defined into the parent class ``shape``, as can be seen into this
+snippet taken by that class: ::
+
+    // The colors are common attributes between all shapes
+    var colors = ['stroke', 'fill'];
+    object.att = colors.concat(att);
+
+For example, the final positions of parameters in a ``line`` action
+will be: ::
+
+    stroke | fill | opacity | stroke-width | x1 | y1 | x2 | y2
+    0        1      2         3              4    5    6    7
+
+Other actions
+````````````````````````````````````````````````````````````````
+
+I will summarize in a table the parameters for all actions which are
+not shapes (line, circle, rect, path, etcetera are excluded). For each
+action, I include the file from where the corresponding ``sender_add``
+function is called (this can be easy wiewed using ``grep sender_add
+*.js``). Actions ``clear`` and ``delete`` don't have parameters.
+
+.. csv-table:: Parameters for not-shape actions
+    :header: "Action", "Parameters", "File"
+
+    "move"  , "translation_x | translation_y", "whiteboard.js"
+    "chat"  , "text"                         , "chat.js"
+    "slides", "escaped_url"                  , "menu.js"
+    "clear" , " - "                          , "whiteboard.js"
+    "delete", " - "                          , "whiteboard.js"
+
+You can see that the files roughly correspond to the position of the
+user interface elements that the user activates to perform a given
+action.
+
+For action without parameters, usually a copy of the action type (for
+example ``delete`` for the *delete* action) is used as parameter, to
+avoid problems found while parsing empty XML fields with Internet
+Explorer (there is a comment on this into the main for cycle into
+``receiver_handler`` into application.js). The copy of the action type
+is filled automatically by ``sender_add`` when the ``parameter``
+argument is missing or it is an empty array.
+
+Drawbacks and alternatives to the use of joined arrays
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+The use of joined arrays has several advantages, like easiness of
+implementation and an efficient use of storage space, but it also
+presents severe drawbacks when considering readability and
+maintainability of the code, since the developer has to use positional
+parameters in a coherent way each time he tries to parse the format.
+
+Joined array of the update structure
+````````````````````````````````````````````````````````````````
+
+The joined array used for the update structure isn't a problem, since
+positional parameters are used just one time. It is enough to follow
+the path of a new update to realize that this joined array is used just
+one time, when the update is sent to the server.
+
+The update is created within the client side function ``sender_add``
+(into ``application.js``), then when the server receives the line, it
+parses its fields and stores them into a php array giving textual
+labels to each field (function ``write`` into ``updates.php``). The
+array is then stored, as it is, into the database, and when the server
+has to send updates to a client (function ``read`` into
+``updates.php``), it translates the array structure into a XML
+structure, so the textual labels remain with the data event when the
+client side has to parse again the updates (``receiver_handler`` into
+``application.js``).
+
+So in this case the positional parameters are sostituted almost
+immediately with textual labels, and the readability problem doesn't
+exists in practice; the question here is rather if this storing of
+redundant labels into the database should be avoided.
+
+Joined array for the action parameters
+````````````````````````````````````````````````````````````````
+
+The use of positional parameters is quite a problem with the action
+parameters handling, because action parameters get accessed by
+different parts of both server and client side code, and the developer
+has to check manually if each index is the right one.
+
+The parts of the code that are depending on the parameter positions
+range from the shape (and chat message) creation functions on the
+client side, to the server side functions which export the whiteboard
+contents in different formats, to other server side functions (for
+example, the acquisition on the server of a newly inserted image).
+
+The alternative would be to have textual labels associated to each
+field, this would be much readable and much maintainable, but this
+would come at a cost: how to store these labels when the actions get
+written into the database?
+
+It is clear that all actions of a given type stored into the database
+should have the same format, so there's no reason to repeat the
+format; a centralized reference should exist to hold the appropriate
+labels.
+
+This *label reference* would be an array with the form: ::
+
+    line:    'stroke', 'fill', 'opacity', 'stroke-width', ...
+    polygon: 'stroke', 'fill', 'fill-opacity', ...
+
+This label reference should be either transmitted between the client
+and the server, or defined two times, once on the client and once on
+the server side. I think the latter is the best solution, but the two
+structures should be syntactically as similar as possible, to be
+easily compared and updated by the developer in case of change
+
+As already seen, on the client side, each shape defines its parameters
+(in the file ``shapes.js``). This comes from the object oriented
+paradigm, in an effort to make each shape opaque and independent from
+the rest of the code.
+
+Wheter is better or not to define shape parameters within each shape,
+I think it is a subjective matter; however, a centralized *label
+reference* could be added to the server side, and this would probably
+be a maintainability improvement.
+
+Until now I have done without a label reference, but I find that the
+necessity could come in the future to use textual labels instead of
+numerical parameters in the server side, that's why I included this
+short analysis into the documentation to explain how to add it.
+
+Specific solutions and workarounds
+________________________________________________________________
+
+.. todo_comment Qui ci andranno le scripting portability notes e le
+      fixed issues
+
+Testing environment and methods
+________________________________________________________________
+
+Hardware
+................................................................
+
+Directions for further development
+________________________________________________________________
+
+Notes
+________________________________________________________________
+
+.. [#client_rewrite] While a complete rewriting of the client code
+       would probably be convenient, there wasn't a strict need to
+       perform it, and I was unable to evaluate the benefits of such
+       an expensive work. So I decided to use the object oriented
+       paradigm for the newly developed parts, and to convert only the
+       more complicated and important parts of the existent code, that
+       means the core whiteboard logic (resulting into the shape
+       object) and the ajax channel management (resulting into the
+       channel object).
+
+.. [#database_double_access] The definition of these two steps seems
+       quite logical and clean, but it presents a performance
+       weakness: when the login page or the application page is sent
+       into the *markup send* step, another database access must be
+       performed. This comes because the login page requires a new
+       salt, and the application page requires data which must be
+       specific for each user; the problem is that the database access
+       was likely already made during the *update* step, by a function
+       that doesn't cares about the kind of page that will be sent as
+       output. The *update* functions could be changed in order to
+       retrieve directly the data also for the output, but I think
+       that the problem is negligible currently, because the login and
+       application pages get sent quite seldom to the user, comparing
+       with other server modes.

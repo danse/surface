@@ -1,0 +1,1016 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="679.03674"
+   height="373.61108"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.47pre4 r22446"
+   sodipodi:docname="base_principle.svg"
+   inkscape:export-filename="/home/francesco/tesi/doc/images/base_principle.png"
+   inkscape:export-xdpi="89.996841"
+   inkscape:export-ydpi="89.996841">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="Arrow2Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow2Mend"
+       style="overflow:visible">
+      <path
+         id="path8459"
+         style="font-size:12px;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="scale(-0.6,-0.6)" />
+    </marker>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+    <inkscape:perspective
+       id="perspective5861"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective7803"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective7803-3"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective7803-6"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective7803-37"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective7803-7"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective8407"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="346.97355"
+     inkscape:cy="108.30302"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1400"
+     inkscape:window-height="976"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-25.073686,-244.7597)">
+    <rect
+       style="color:#000000;fill:none;stroke:#999999;stroke-width:1.31577432;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect3659"
+       width="168.00081"
+       height="186.24527"
+       x="234.89067"
+       y="245.41759"
+       rx="16.725134"
+       ry="16.725134"
+       inkscape:export-filename="/home/francesco/public/tesi/doc/images/base_principle.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       ry="5.3223648"
+       rx="3.5176904"
+       y="298.50354"
+       x="267.20056"
+       height="11.849321"
+       width="103.381"
+       id="rect3603"
+       style="color:#000000;fill:#ff6600;fill-opacity:1;stroke:#cccccc;stroke-width:0.66720319;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       inkscape:tile-cx="370.90335"
+       inkscape:tile-cy="418.41444"
+       inkscape:tile-w="302.55649"
+       inkscape:tile-h="17.826569"
+       inkscape:tile-x0="219.62511"
+       inkscape:tile-y0="409.50116"
+       inkscape:export-filename="/home/francesco/public/tesi/doc/images/base_principle.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <use
+       x="0"
+       y="0"
+       inkscape:tiled-clone-of="#rect3603"
+       xlink:href="#rect3603"
+       id="use3639"
+       style="stroke:#cccccc"
+       width="744.09448"
+       height="1052.3622"
+       inkscape:export-filename="/home/francesco/public/tesi/doc/images/base_principle.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <use
+       x="0"
+       y="0"
+       inkscape:tiled-clone-of="#rect3603"
+       xlink:href="#rect3603"
+       transform="translate(0,11.849322)"
+       id="use3641"
+       style="stroke:#cccccc"
+       width="744.09448"
+       height="1052.3622"
+       inkscape:export-filename="/home/francesco/public/tesi/doc/images/base_principle.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <use
+       x="0"
+       y="0"
+       inkscape:tiled-clone-of="#rect3603"
+       xlink:href="#rect3603"
+       transform="translate(0,23.698646)"
+       id="use3643"
+       style="stroke:#cccccc"
+       width="744.09448"
+       height="1052.3622"
+       inkscape:export-filename="/home/francesco/public/tesi/doc/images/base_principle.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       inkscape:tile-y0="409.50116"
+       inkscape:tile-x0="219.62511"
+       style="color:#000000;fill:#b3b3b3;fill-opacity:1;stroke:#cccccc;stroke-width:0.66720319;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="use3645"
+       width="103.381"
+       height="11.849321"
+       x="267.20056"
+       y="334.05154"
+       rx="3.5176904"
+       ry="5.3223648"
+       inkscape:export-filename="/home/francesco/public/tesi/doc/images/base_principle.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       inkscape:tile-y0="409.50116"
+       inkscape:tile-x0="219.62511"
+       style="color:#000000;fill:#b3b3b3;fill-opacity:1;stroke:#cccccc;stroke-width:0.66720319;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="use3647"
+       width="103.381"
+       height="11.849321"
+       x="267.20056"
+       y="345.90085"
+       rx="3.5176904"
+       ry="5.3223648"
+       inkscape:export-filename="/home/francesco/public/tesi/doc/images/base_principle.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       inkscape:tile-y0="409.50116"
+       inkscape:tile-x0="219.62511"
+       style="color:#000000;fill:#b3b3b3;fill-opacity:1;stroke:#cccccc;stroke-width:0.66720319;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="use3649"
+       width="103.381"
+       height="11.849321"
+       x="267.20056"
+       y="357.75015"
+       rx="3.5176904"
+       ry="5.3223648"
+       inkscape:export-filename="/home/francesco/public/tesi/doc/images/base_principle.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       inkscape:tile-y0="409.50116"
+       inkscape:tile-x0="219.62511"
+       style="color:#000000;fill:#b3b3b3;fill-opacity:1;stroke:#cccccc;stroke-width:0.66720319;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="use3651"
+       width="103.381"
+       height="11.849321"
+       x="267.20056"
+       y="369.59949"
+       rx="3.5176904"
+       ry="5.3223648"
+       inkscape:export-filename="/home/francesco/public/tesi/doc/images/base_principle.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       inkscape:tile-y0="409.50116"
+       inkscape:tile-x0="219.62511"
+       style="color:#000000;fill:#b3b3b3;fill-opacity:1;stroke:#cccccc;stroke-width:0.66720319;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="use3653"
+       width="103.381"
+       height="11.849321"
+       x="267.20056"
+       y="381.44882"
+       rx="3.5176904"
+       ry="5.3223648"
+       inkscape:export-filename="/home/francesco/public/tesi/doc/images/base_principle.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       inkscape:tile-y0="409.50116"
+       inkscape:tile-x0="219.62511"
+       style="color:#000000;fill:#b3b3b3;fill-opacity:1;stroke:#cccccc;stroke-width:0.66720319;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="use3655"
+       width="103.381"
+       height="11.849321"
+       x="267.20056"
+       y="393.29816"
+       rx="3.5176904"
+       ry="5.3223648"
+       inkscape:export-filename="/home/francesco/public/tesi/doc/images/base_principle.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <rect
+       inkscape:tile-y0="409.50116"
+       inkscape:tile-x0="219.62511"
+       style="color:#000000;fill:#b3b3b3;fill-opacity:1;stroke:#cccccc;stroke-width:0.66720319;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="use3657"
+       width="103.381"
+       height="11.849321"
+       x="267.20056"
+       y="405.14749"
+       rx="3.5176904"
+       ry="5.3223648"
+       inkscape:export-filename="/home/francesco/public/tesi/doc/images/base_principle.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <text
+       xml:space="preserve"
+       style="font-size:16.4855423px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Rachana;-inkscape-font-specification:Andale Mono Italic"
+       x="291.16287"
+       y="270.54401"
+       id="text3661"
+       inkscape:export-filename="/home/francesco/public/tesi/doc/images/base_principle.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         sodipodi:role="line"
+         id="tspan3663"
+         x="291.16287"
+         y="270.54401">Server</tspan></text>
+    <text
+       id="text8298"
+       y="305.46216"
+       x="255.8567"
+       style="font-size:5.90419579px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Rachana;-inkscape-font-specification:Rachana"
+       xml:space="preserve"
+       inkscape:export-filename="/home/francesco/public/tesi/doc/images/base_principle.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         y="305.46216"
+         x="255.8567"
+         id="tspan8300"
+         sodipodi:role="line">37</tspan></text>
+    <text
+       id="text8302"
+       y="316.24649"
+       x="255.80194"
+       style="font-size:5.90419579px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Rachana;-inkscape-font-specification:Rachana"
+       xml:space="preserve"
+       inkscape:export-filename="/home/francesco/public/tesi/doc/images/base_principle.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         y="316.24649"
+         x="255.80194"
+         id="tspan8304"
+         sodipodi:role="line">36</tspan></text>
+    <text
+       id="text8306"
+       y="327.02206"
+       x="255.88847"
+       style="font-size:5.90419579px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Rachana;-inkscape-font-specification:Rachana"
+       xml:space="preserve"
+       inkscape:export-filename="/home/francesco/public/tesi/doc/images/base_principle.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         y="327.02206"
+         x="255.88847"
+         id="tspan8308"
+         sodipodi:role="line">35</tspan></text>
+    <text
+       id="text8310"
+       y="337.74576"
+       x="255.79041"
+       style="font-size:5.90419579px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Rachana;-inkscape-font-specification:Rachana"
+       xml:space="preserve"
+       inkscape:export-filename="/home/francesco/public/tesi/doc/images/base_principle.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         y="337.74576"
+         x="255.79041"
+         id="tspan8312"
+         sodipodi:role="line">34</tspan></text>
+    <text
+       id="text8314"
+       y="348.50696"
+       x="255.9086"
+       style="font-size:5.90419579px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Rachana;-inkscape-font-specification:Rachana"
+       xml:space="preserve"
+       inkscape:export-filename="/home/francesco/public/tesi/doc/images/base_principle.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         y="348.50696"
+         x="255.9086"
+         id="tspan8316"
+         sodipodi:role="line">33</tspan></text>
+    <text
+       id="text8318"
+       y="359.2681"
+       x="255.78175"
+       style="font-size:5.90419579px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Rachana;-inkscape-font-specification:Rachana"
+       xml:space="preserve"
+       inkscape:export-filename="/home/francesco/public/tesi/doc/images/base_principle.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         y="359.2681"
+         x="255.78175"
+         id="tspan8320"
+         sodipodi:role="line">32</tspan></text>
+    <text
+       id="text8322"
+       y="370.02924"
+       x="256.02109"
+       style="font-size:5.90419579px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Rachana;-inkscape-font-specification:Rachana"
+       xml:space="preserve"
+       inkscape:export-filename="/home/francesco/public/tesi/doc/images/base_principle.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         y="370.02924"
+         x="256.02109"
+         id="tspan8324"
+         sodipodi:role="line">31</tspan></text>
+    <text
+       id="text8326"
+       y="380.79053"
+       x="255.77892"
+       style="font-size:5.90419579px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Rachana;-inkscape-font-specification:Rachana"
+       xml:space="preserve"
+       inkscape:export-filename="/home/francesco/public/tesi/doc/images/base_principle.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         y="380.79053"
+         x="255.77892"
+         id="tspan8328"
+         sodipodi:role="line">30</tspan></text>
+    <text
+       id="text8330"
+       y="402.31284"
+       x="255.90572"
+       style="font-size:5.90419579px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Rachana;-inkscape-font-specification:Rachana"
+       xml:space="preserve"
+       inkscape:export-filename="/home/francesco/public/tesi/doc/images/base_principle.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         y="402.31284"
+         x="255.90572"
+         id="tspan8332"
+         sodipodi:role="line">28</tspan></text>
+    <text
+       id="text8334"
+       y="391.52576"
+       x="255.86536"
+       style="font-size:5.90419579px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Rachana;-inkscape-font-specification:Rachana"
+       xml:space="preserve"
+       inkscape:export-filename="/home/francesco/public/tesi/doc/images/base_principle.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         y="391.52576"
+         x="255.86536"
+         id="tspan8336"
+         sodipodi:role="line">29</tspan></text>
+    <text
+       id="text8338"
+       y="413.09134"
+       x="255.8942"
+       style="font-size:5.90419579px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Rachana;-inkscape-font-specification:Rachana"
+       xml:space="preserve"
+       inkscape:export-filename="/home/francesco/public/tesi/doc/images/base_principle.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         y="413.09134"
+         x="255.8942"
+         id="tspan8340"
+         sodipodi:role="line">27</tspan></text>
+    <g
+       transform="matrix(0.76829594,0,0,0.76829594,-248.22005,182.65089)"
+       id="g7767"
+       inkscape:export-filename="/home/francesco/public/tesi/doc/images/base_principle.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200">
+      <rect
+         ry="20.702003"
+         rx="17.788544"
+         y="369.30792"
+         x="356.46899"
+         height="197.06232"
+         width="270.79953"
+         id="rect3681"
+         style="color:#000000;fill:#e6e6e6;stroke:#999999;stroke-width:1.50969124;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <rect
+         ry="20.702003"
+         rx="17.788544"
+         y="410.70923"
+         x="364.55417"
+         height="145.26334"
+         width="251.9962"
+         id="rect3683"
+         style="color:#000000;fill:#ffffff;stroke:#999999;stroke-width:1.50969124;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <g
+         id="g7646"
+         transform="translate(204.22836,-135.1103)">
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1.06561327;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 307.79417,600.27404 0,5.62912"
+           id="path7479-4"
+           sodipodi:nodetypes="cc" />
+        <path
+           sodipodi:nodetypes="cc"
+           id="path7548-3"
+           d="m 299.99938,604.67747 4.87495,2.81455"
+           style="fill:none;stroke:#000000;stroke-width:1.06561327;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+        <path
+           sodipodi:nodetypes="cc"
+           id="path7550-8"
+           d="m 300.36141,613.39409 4.87495,-2.81456"
+           style="fill:none;stroke:#000000;stroke-width:1.06561327;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+        <path
+           sodipodi:nodetypes="cc"
+           id="path7552-5"
+           d="m 310.35082,607.40066 4.87496,-2.81455"
+           style="fill:none;stroke:#000000;stroke-width:1.06561327;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1.06561327;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 310.53354,610.57953 4.87497,2.81456"
+           id="path7479-5-8"
+           sodipodi:nodetypes="cc" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:1.06561327;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 307.79417,611.16968 0,5.62912"
+           id="path7479-00-3"
+           sodipodi:nodetypes="cc" />
+      </g>
+      <text
+         id="text5959"
+         y="397.79459"
+         x="376.07724"
+         style="font-size:13.94686222px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Rachana;-inkscape-font-specification:Andale Mono Italic"
+         xml:space="preserve"><tspan
+           y="397.79459"
+           x="376.07724"
+           id="tspan5961"
+           sodipodi:role="line">Whiteboard</tspan></text>
+      <path
+         id="path5963"
+         d="m 535.58021,435.41178 0,99.71786"
+         style="fill:none;stroke:#cccccc;stroke-width:0.79977101px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <rect
+         inkscape:tile-y0="433.52264"
+         inkscape:tile-x0="550.77863"
+         inkscape:tile-h="15.442391"
+         inkscape:tile-w="60.625683"
+         inkscape:tile-cy="441.24384"
+         inkscape:tile-cx="581.09147"
+         y="421.5119"
+         x="539.91174"
+         height="15.442391"
+         width="60.625683"
+         id="rect5985"
+         style="color:#000000;fill:#e6e6e6;fill-opacity:1;stroke:#666666;stroke-width:0.60000002;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <use
+         height="1052.3622"
+         width="744.09448"
+         id="use6007"
+         transform="translate(4.9219336e-8,15.442391)"
+         xlink:href="#rect5985"
+         inkscape:tiled-clone-of="#rect5985"
+         y="0"
+         x="0" />
+      <use
+         height="1052.3622"
+         width="744.09448"
+         id="use6009"
+         transform="translate(4.9219336e-8,30.884782)"
+         xlink:href="#rect5985"
+         inkscape:tiled-clone-of="#rect5985"
+         y="0"
+         x="0" />
+      <use
+         height="1052.3622"
+         width="744.09448"
+         id="use6011"
+         transform="translate(4.9219336e-8,46.327173)"
+         xlink:href="#rect5985"
+         inkscape:tiled-clone-of="#rect5985"
+         y="0"
+         x="0" />
+      <use
+         height="1052.3622"
+         width="744.09448"
+         id="use6013"
+         transform="translate(4.9219336e-8,61.769564)"
+         xlink:href="#rect5985"
+         inkscape:tiled-clone-of="#rect5985"
+         y="0"
+         x="0" />
+      <use
+         height="1052.3622"
+         width="744.09448"
+         id="use6015"
+         transform="translate(4.9219336e-8,77.211955)"
+         xlink:href="#rect5985"
+         inkscape:tiled-clone-of="#rect5985"
+         y="0"
+         x="0" />
+      <use
+         height="1052.3622"
+         width="744.09448"
+         id="use6017"
+         transform="translate(4.9219336e-8,92.654346)"
+         xlink:href="#rect5985"
+         inkscape:tiled-clone-of="#rect5985"
+         y="0"
+         x="0" />
+      <use
+         height="1052.3622"
+         width="744.09448"
+         id="use6019"
+         transform="translate(4.9219336e-8,108.09674)"
+         xlink:href="#rect5985"
+         inkscape:tiled-clone-of="#rect5985"
+         y="0"
+         x="0" />
+      <path
+         transform="matrix(1.3930187,0,0,1.3930187,-168.00155,-187.65765)"
+         d="m 479.28607,501.58356 c 0,12.95083 -10.49872,23.44955 -23.44955,23.44955 -12.95084,0 -23.44956,-10.49872 -23.44956,-23.44955 0,-12.95084 10.49872,-23.44956 23.44956,-23.44956 12.95083,0 23.44955,10.49872 23.44955,23.44956 z"
+         sodipodi:ry="23.449556"
+         sodipodi:rx="23.449556"
+         sodipodi:cy="501.58356"
+         sodipodi:cx="455.83652"
+         id="path6021"
+         style="color:#000000;fill:#ff2a2a;fill-opacity:0.56170211;stroke:#4d4d4d;stroke-width:0.60000002;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         sodipodi:type="arc" />
+      <path
+         transform="matrix(1.3930187,0,0,1.3930187,-168.00155,-187.65765)"
+         d="m 457.55234,480.70773 c 0,11.5294 -9.34643,20.87583 -20.87583,20.87583 -11.5294,0 -20.87582,-9.34643 -20.87582,-20.87583 0,-11.5294 9.34642,-20.87582 20.87582,-20.87582 11.5294,0 20.87583,9.34642 20.87583,20.87582 z"
+         sodipodi:ry="20.875826"
+         sodipodi:rx="20.875826"
+         sodipodi:cy="480.70773"
+         sodipodi:cx="436.67651"
+         id="path6023"
+         style="color:#000000;fill:#ff2a2a;fill-opacity:0.56170211;stroke:#4d4d4d;stroke-width:0.60000002;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         sodipodi:type="arc" />
+      <path
+         id="path6556"
+         d="m 420.24293,440.51198 c 0.58776,-0.19592 1.19381,-0.3437 1.76326,-0.58775 2.86197,-1.22656 2.05855,-1.35679 5.28977,-2.35101 1.54414,-0.47512 3.14538,-0.74311 4.70202,-1.17551 1.97082,-0.54745 3.91079,-1.20133 5.87753,-1.76325 0.7767,-0.22192 1.5743,-0.36584 2.351,-0.58776 0.59571,-0.1702 1.17551,-0.39183 1.76326,-0.58775 0.78367,-0.39183 1.50855,-0.9348 2.35101,-1.1755 0.56514,-0.16147 1.18692,0.11526 1.76326,0 0.42958,-0.0859 0.74593,-0.50184 1.1755,-0.58776 0.57634,-0.11526 1.17551,0 1.76326,0 1.1755,0 2.35101,0 3.52651,0 0.38611,0 2.2128,-0.0691 2.35101,0 0.17524,0.0876 0,0.39184 0,0.58776 0,0.66051 0.10829,3.73526 0,4.11426 -0.2407,0.84246 -0.86786,1.53063 -1.1755,2.35101 -1.32103,3.52276 -0.15794,1.10554 -0.58775,4.11427 -0.11424,0.79967 -0.45496,1.55421 -0.58776,2.35101 -0.0644,0.3865 0.21735,0.84948 0,1.1755 -0.243,0.36451 -0.86573,0.27798 -1.1755,0.58776 -0.13854,0.13853 -0.17523,0.50013 0,0.58775 0.35047,0.17523 1.1755,-0.39184 1.1755,0 0,0.39183 -1.56734,0 -1.1755,0 2.15509,0 4.31018,0 6.46528,0 1.95917,0 3.91834,0 5.87752,0 0.58775,0 1.1755,0 1.76326,0 0.39183,0 0.79127,0.0768 1.1755,0 0.60751,-0.1215 1.16221,-0.43749 1.76326,-0.58775 0.19007,-0.0475 0.39768,0.0475 0.58775,0 0.60105,-0.15027 1.15574,-0.46625 1.76326,-0.58776 0.38422,-0.0768 0.82503,0.17524 1.1755,0 0.49564,-0.24781 0.67987,-0.92768 1.17551,-1.1755 0.35046,-0.17523 0.80377,0.12391 1.1755,0 0.26285,-0.0876 0.33994,-0.46384 0.58775,-0.58775 0.17524,-0.0876 0.39184,0 0.58776,0 0.39183,0 0.79536,0.095 1.1755,0 0.42501,-0.10625 0.7505,-0.4815 1.17551,-0.58776 0.38013,-0.095 0.78367,0 1.1755,0 0.19592,0 0.42474,0.10868 0.58775,0 0.46107,-0.30738 0.71444,-0.86812 1.17551,-1.1755 0.0484,-0.0322 2.20518,0 2.35101,0 0.19591,0 0.50013,-0.17523 0.58775,0 0.11024,0.22049 0,3.17658 0,3.52651 0,1.8204 0.25778,3.59872 -0.58775,5.28978 -2.77195,5.54388 -0.11012,-0.1287 -1.76326,2.351 -0.24301,0.36451 -0.27798,0.86574 -0.58775,1.17551 -0.30978,0.30977 -0.86573,0.27798 -1.17551,0.58775 -0.13853,0.13854 0.062,0.40189 0,0.58775 -0.13853,0.41561 -0.44922,0.7599 -0.58775,1.17551 -0.062,0.18586 0.17523,0.50013 0,0.58775 -1.56734,0.78367 -1.1755,-1.1755 -1.1755,1.17551 0,0.19591 0,0.39183 0,0.58775 0,0.19592 0,0.39183 0,0.58775 0,1.17551 0,2.35101 0,3.52651 0,0.19592 -0.17524,0.50014 0,0.58776 0.35046,0.17523 0.78367,0 1.1755,0 1.56734,0 3.13468,0 4.70202,0 4.5061,0 9.0122,0 13.5183,0 1.17551,0 2.35101,0 3.52652,0 0.58775,0 1.23755,-0.26285 1.76325,0 0.17524,0.0876 0,0.39183 0,0.58775 0,0.58775 0,1.1755 0,1.76326 0,1.37142 0,2.74284 0,4.11426 0,0.19592 0.10868,0.42474 0,0.58776 -0.30738,0.46107 -0.86812,0.71443 -1.1755,1.1755 -0.10868,0.16301 0,0.39183 0,0.58775 0,0.39184 -0.27707,0.89844 0,1.17551 0.27707,0.27707 0.78367,0 1.1755,0 0.19592,0 0.39184,0 0.58776,0 0.58775,0 1.1755,0 1.76325,0 0.19592,0 0.39184,0 0.58776,0 0.19591,0 0.42474,0.10867 0.58775,0 0.46107,-0.30738 0.71443,-0.86813 1.1755,-1.17551 0.32603,-0.21735 0.80378,0.12391 1.17551,0 2.02611,-0.67537 0.43538,-0.58775 1.76325,-0.58775"
+         style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <g
+         transform="matrix(0.04488216,0,0,0.04488216,514.83241,474.14848)"
+         style="fill-rule:nonzero;stroke:#000000;stroke-width:24.5334053;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="Vrstva_x0020_1-1">
+        <g
+           style="stroke-width:24.5334053;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+           id="g3458-5">
+          <path
+             style="fill:#ffffff;fill-rule:evenodd;stroke-width:24.5334053;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+             id="path3460-9"
+             d="M 208.75,191.70459 2.5,5.6225586 V 262.68115 l 60.104492,-60.42773 65.294918,126.60742 h 55.96973 L 112.35449,191.70459 H 208.75 z" />
+        </g>
+      </g>
+    </g>
+    <g
+       id="g8253"
+       transform="matrix(1.4760489,0,0,1.4760489,-68.237735,-355.66731)"
+       inkscape:export-filename="/home/francesco/public/tesi/doc/images/base_principle.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200">
+      <rect
+         ry="10.775568"
+         rx="9.2590876"
+         y="554.48956"
+         x="323.89597"
+         height="102.5726"
+         width="140.95345"
+         id="rect3681-3"
+         style="color:#000000;fill:#e6e6e6;stroke:#999999;stroke-width:0.78580707;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <rect
+         ry="10.775568"
+         rx="9.2590876"
+         y="576.03931"
+         x="328.10437"
+         height="75.610794"
+         width="131.16615"
+         id="rect3683-0"
+         style="color:#000000;fill:#ffffff;stroke:#999999;stroke-width:0.78580707;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <text
+         id="text5959-8"
+         y="569.31708"
+         x="334.10223"
+         style="font-size:7.25945997px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Rachana;-inkscape-font-specification:Andale Mono Italic"
+         xml:space="preserve"><tspan
+           y="569.31708"
+           x="334.10223"
+           id="tspan5961-8"
+           sodipodi:role="line">Whiteboard</tspan></text>
+      <path
+         id="path5963-4"
+         d="m 417.12487,588.89717 0,51.90398"
+         style="fill:none;stroke:#cccccc;stroke-width:0.41628757px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <rect
+         inkscape:tile-y0="433.52264"
+         inkscape:tile-x0="550.77863"
+         inkscape:tile-h="15.442391"
+         inkscape:tile-w="60.625683"
+         inkscape:tile-cy="441.24384"
+         inkscape:tile-cx="581.09147"
+         y="581.66217"
+         x="419.37946"
+         height="8.0378952"
+         width="31.556181"
+         id="rect5985-3"
+         style="color:#000000;fill:#e6e6e6;fill-opacity:1;stroke:#666666;stroke-width:0.31230509;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <use
+         height="1052.3622"
+         width="744.09448"
+         id="use6007-1"
+         transform="translate(2.5619073e-8,8.0378952)"
+         xlink:href="#rect5985-3"
+         inkscape:tiled-clone-of="#rect5985-3"
+         y="0"
+         x="0" />
+      <use
+         height="1052.3622"
+         width="744.09448"
+         id="use6009-4"
+         transform="translate(2.5619073e-8,16.07579)"
+         xlink:href="#rect5985-3"
+         inkscape:tiled-clone-of="#rect5985-3"
+         y="0"
+         x="0" />
+      <use
+         height="1052.3622"
+         width="744.09448"
+         id="use6011-5"
+         transform="translate(2.5619073e-8,24.113685)"
+         xlink:href="#rect5985-3"
+         inkscape:tiled-clone-of="#rect5985-3"
+         y="0"
+         x="0" />
+      <use
+         height="1052.3622"
+         width="744.09448"
+         id="use6013-1"
+         transform="translate(2.5619073e-8,32.151581)"
+         xlink:href="#rect5985-3"
+         inkscape:tiled-clone-of="#rect5985-3"
+         y="0"
+         x="0" />
+      <use
+         height="1052.3622"
+         width="744.09448"
+         id="use6015-0"
+         transform="translate(2.5619073e-8,40.189476)"
+         xlink:href="#rect5985-3"
+         inkscape:tiled-clone-of="#rect5985-3"
+         y="0"
+         x="0" />
+      <use
+         height="1052.3622"
+         width="744.09448"
+         id="use6017-0"
+         transform="translate(2.5619073e-8,48.227371)"
+         xlink:href="#rect5985-3"
+         inkscape:tiled-clone-of="#rect5985-3"
+         y="0"
+         x="0" />
+      <use
+         height="1052.3622"
+         width="744.09448"
+         id="use6019-4"
+         transform="translate(2.5619073e-8,56.265268)"
+         xlink:href="#rect5985-3"
+         inkscape:tiled-clone-of="#rect5985-3"
+         y="0"
+         x="0" />
+      <path
+         transform="matrix(0.72507802,0,0,0.72507802,50.904612,264.58426)"
+         d="m 479.28607,501.58356 c 0,12.95083 -10.49872,23.44955 -23.44955,23.44955 -12.95084,0 -23.44956,-10.49872 -23.44956,-23.44955 0,-12.95084 10.49872,-23.44956 23.44956,-23.44956 12.95083,0 23.44955,10.49872 23.44955,23.44956 z"
+         sodipodi:ry="23.449556"
+         sodipodi:rx="23.449556"
+         sodipodi:cy="501.58356"
+         sodipodi:cx="455.83652"
+         id="path6021-5"
+         style="color:#000000;fill:#ff2a2a;fill-opacity:0.56170211;stroke:#4d4d4d;stroke-width:0.60000002;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         sodipodi:type="arc" />
+      <path
+         transform="matrix(0.72507802,0,0,0.72507802,50.904612,264.58426)"
+         d="m 457.55234,480.70773 c 0,11.5294 -9.34643,20.87583 -20.87583,20.87583 -11.5294,0 -20.87582,-9.34643 -20.87582,-20.87583 0,-11.5294 9.34642,-20.87582 20.87582,-20.87582 11.5294,0 20.87583,9.34642 20.87583,20.87582 z"
+         sodipodi:ry="20.875826"
+         sodipodi:rx="20.875826"
+         sodipodi:cy="480.70773"
+         sodipodi:cx="436.67651"
+         id="path6023-4"
+         style="color:#000000;fill:#ff2a2a;fill-opacity:0.56170211;stroke:#4d4d4d;stroke-width:0.60000002;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         sodipodi:type="arc" />
+    </g>
+    <g
+       id="g8236"
+       transform="matrix(1.4760489,0,0,1.4760489,-215.72144,-350.462)"
+       inkscape:export-filename="/home/francesco/public/tesi/doc/images/base_principle.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200">
+      <rect
+         ry="10.775568"
+         rx="9.2590876"
+         y="480.51212"
+         x="481.82535"
+         height="102.5726"
+         width="140.95345"
+         id="rect3681-2"
+         style="color:#000000;fill:#e6e6e6;stroke:#999999;stroke-width:0.78580707;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <rect
+         ry="10.775568"
+         rx="9.2590876"
+         y="502.06183"
+         x="486.03375"
+         height="75.610794"
+         width="131.16615"
+         id="rect3683-3"
+         style="color:#000000;fill:#ffffff;stroke:#999999;stroke-width:0.78580707;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <text
+         id="text5959-7"
+         y="495.33966"
+         x="492.03162"
+         style="font-size:7.25945997px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Rachana;-inkscape-font-specification:Andale Mono Italic"
+         xml:space="preserve"><tspan
+           y="495.33966"
+           x="492.03162"
+           id="tspan5961-1"
+           sodipodi:role="line">Whiteboard</tspan></text>
+      <path
+         id="path5963-9"
+         d="m 575.05426,514.91973 0,51.90398"
+         style="fill:none;stroke:#cccccc;stroke-width:0.41628757px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <rect
+         inkscape:tile-y0="433.52264"
+         inkscape:tile-x0="550.77863"
+         inkscape:tile-h="15.442391"
+         inkscape:tile-w="60.625683"
+         inkscape:tile-cy="441.24384"
+         inkscape:tile-cx="581.09147"
+         y="507.68472"
+         x="577.30884"
+         height="8.0378952"
+         width="31.556181"
+         id="rect5985-8"
+         style="color:#000000;fill:#e6e6e6;fill-opacity:1;stroke:#666666;stroke-width:0.31230509;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <use
+         height="1052.3622"
+         width="744.09448"
+         id="use6007-6"
+         transform="translate(2.5619102e-8,8.0378952)"
+         xlink:href="#rect5985-8"
+         inkscape:tiled-clone-of="#rect5985-8"
+         y="0"
+         x="0" />
+      <use
+         height="1052.3622"
+         width="744.09448"
+         id="use6009-6"
+         transform="translate(2.5619102e-8,16.07579)"
+         xlink:href="#rect5985-8"
+         inkscape:tiled-clone-of="#rect5985-8"
+         y="0"
+         x="0" />
+      <use
+         height="1052.3622"
+         width="744.09448"
+         id="use6011-2"
+         transform="translate(2.5619102e-8,24.113685)"
+         xlink:href="#rect5985-8"
+         inkscape:tiled-clone-of="#rect5985-8"
+         y="0"
+         x="0" />
+      <use
+         height="1052.3622"
+         width="744.09448"
+         id="use6013-6"
+         transform="translate(2.5619102e-8,32.151581)"
+         xlink:href="#rect5985-8"
+         inkscape:tiled-clone-of="#rect5985-8"
+         y="0"
+         x="0" />
+      <use
+         height="1052.3622"
+         width="744.09448"
+         id="use6015-6"
+         transform="translate(2.5619102e-8,40.189476)"
+         xlink:href="#rect5985-8"
+         inkscape:tiled-clone-of="#rect5985-8"
+         y="0"
+         x="0" />
+      <use
+         height="1052.3622"
+         width="744.09448"
+         id="use6017-8"
+         transform="translate(2.5619102e-8,48.227371)"
+         xlink:href="#rect5985-8"
+         inkscape:tiled-clone-of="#rect5985-8"
+         y="0"
+         x="0" />
+      <use
+         height="1052.3622"
+         width="744.09448"
+         id="use6019-41"
+         transform="translate(2.5619102e-8,56.265268)"
+         xlink:href="#rect5985-8"
+         inkscape:tiled-clone-of="#rect5985-8"
+         y="0"
+         x="0" />
+      <path
+         transform="matrix(0.72507802,0,0,0.72507802,208.834,190.60682)"
+         d="m 479.28607,501.58356 c 0,12.95083 -10.49872,23.44955 -23.44955,23.44955 -12.95084,0 -23.44956,-10.49872 -23.44956,-23.44955 0,-12.95084 10.49872,-23.44956 23.44956,-23.44956 12.95083,0 23.44955,10.49872 23.44955,23.44956 z"
+         sodipodi:ry="23.449556"
+         sodipodi:rx="23.449556"
+         sodipodi:cy="501.58356"
+         sodipodi:cx="455.83652"
+         id="path6021-0"
+         style="color:#000000;fill:#ff2a2a;fill-opacity:0.56170211;stroke:#4d4d4d;stroke-width:0.60000002;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         sodipodi:type="arc" />
+      <path
+         transform="matrix(0.72507802,0,0,0.72507802,208.834,190.60682)"
+         d="m 457.55234,480.70773 c 0,11.5294 -9.34643,20.87583 -20.87583,20.87583 -11.5294,0 -20.87582,-9.34643 -20.87582,-20.87583 0,-11.5294 9.34642,-20.87582 20.87582,-20.87582 11.5294,0 20.87583,9.34642 20.87583,20.87582 z"
+         sodipodi:ry="20.875826"
+         sodipodi:rx="20.875826"
+         sodipodi:cy="480.70773"
+         sodipodi:cx="436.67651"
+         id="path6023-2"
+         style="color:#000000;fill:#ff2a2a;fill-opacity:0.56170211;stroke:#4d4d4d;stroke-width:0.60000002;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         sodipodi:type="arc" />
+    </g>
+    <rect
+       inkscape:tile-y0="409.50116"
+       inkscape:tile-x0="219.62511"
+       style="color:#000000;fill:#ff6600;fill-opacity:1;stroke:#cccccc;stroke-width:1.05105865;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="use3639-8"
+       width="175.87143"
+       height="21.269224"
+       x="38.158009"
+       y="309.77542"
+       rx="5.5414886"
+       ry="8.384428"
+       inkscape:export-filename="/home/francesco/public/tesi/doc/images/base_principle.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.47604895px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Mend)"
+       d="m 655.29999,337.92747 c 0,0 -65.9339,-64.19878 -219.49047,-43.37755"
+       id="path8421"
+       inkscape:export-filename="/home/francesco/public/tesi/doc/images/base_principle.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.47604895px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Mend)"
+       d="m 390.63034,555.47794 c 0,0 -76.34449,9.54307 -89.35777,-104.9737"
+       id="path8423"
+       inkscape:export-filename="/home/francesco/public/tesi/doc/images/base_principle.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.47604895px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Mend)"
+       d="m 74.908219,459.38465 c 0,0 -10.410618,-131.00024 136.205541,-109.31147"
+       id="path8425"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/francesco/public/tesi/doc/images/base_principle.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.47604895px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Mend)"
+       d="m 100.06721,461.98731 c 0,0 4.33775,-107.57637 110.179,-89.35779"
+       id="path8427"
+       inkscape:export-filename="/home/francesco/public/tesi/doc/images/base_principle.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200" />
+    <text
+       xml:space="preserve"
+       style="font-size:13.28444004px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Rachana;-inkscape-font-specification:Rachana"
+       x="480.92221"
+       y="268.52341"
+       id="text8877"
+       inkscape:export-filename="/home/francesco/public/tesi/doc/images/base_principle.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         sodipodi:role="line"
+         id="tspan8879"
+         x="480.92221"
+         y="268.52341">read from update 36</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:13.28444004px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Rachana;-inkscape-font-specification:Rachana"
+       x="257.96152"
+       y="576.50403"
+       id="text8881"
+       inkscape:export-filename="/home/francesco/public/tesi/doc/images/base_principle.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         sodipodi:role="line"
+         id="tspan8883"
+         x="257.96152"
+         y="576.50403">read from update 36</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:13.28444004px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Rachana;-inkscape-font-specification:Rachana"
+       x="113.08046"
+       y="439.431"
+       id="text8885"
+       inkscape:export-filename="/home/francesco/public/tesi/doc/images/base_principle.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         sodipodi:role="line"
+         id="tspan8887"
+         x="113.08046"
+         y="439.431">read from update 34</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:13.28444004px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Rachana;-inkscape-font-specification:Rachana"
+       x="59.292294"
+       y="302.35788"
+       id="text8889"
+       inkscape:export-filename="/home/francesco/public/tesi/doc/images/base_principle.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         sodipodi:role="line"
+         id="tspan8891"
+         x="59.292294"
+         y="302.35788">write</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:17.71258736px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Rachana;-inkscape-font-specification:Rachana"
+       x="45.411472"
+       y="324.91418"
+       id="text8893"
+       inkscape:export-filename="/home/francesco/public/tesi/doc/images/base_principle.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         sodipodi:role="line"
+         id="tspan8895"
+         x="45.411472"
+         y="324.91418">path | points | color | ...</tspan></text>
+  </g>
+</svg>

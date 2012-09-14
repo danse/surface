@@ -1,0 +1,52 @@
+$Id$
+
+File Contents (see the draw on client side file use into the
+documentation)
+________________________________________________________________
+
+common.js
+
+  Common functions, use both by the scripts of the login page and
+  those of the application page. Among the other things, it contains
+  the 'channel' class to create an ajax channel.
+  
+login.js
+
+  The functions used by the login page, with the state of the
+  interface mantaine d into the 'login' object.
+  
+application.js
+
+  Code about the main page of the application. It in turn calls
+  functions from other files, each one ruling a part of the
+  application: whiteboard, chat, menu
+  
+menu.js
+
+  Functions called by menu buttons and ruling the menu initialization
+  and behavior
+  
+chat.js
+
+  Functions to show chat messages, and change their style
+
+whiteboard.js
+
+  Code related to the whiteboard tools and to the svg canvas. It
+  handles several tools among which move and delete, but it forwards
+  events related to the shapes (lines, circles, etc.) to the shape
+  objects defined into the relative file
+
+shapes.js
+
+  It contains a base shape class, and all derived objects
+
+md5.js
+
+  Contains just the MD5 function
+
+svg.htc
+svg.js
+svg.swf
+
+  The svgweb library

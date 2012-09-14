@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>text target test case</title>
+    <script type="text/javascript" src="svg.js"></script>
+    <script type="text/javascript">
+
+      function init(){
+//        svg = document.getElementsByTagNameNS(svgns, "svg").item(0);
+//        svg.addEventListener("mousedown", handler, false);
+        text = document.getElementById('the text');
+        text.addEventListener('mousedown', handler, false);
+        console.log('init function accomplished');
+      }
+
+      function handler(evt){
+        console.log('clicked on '+evt.target.id);
+      }
+    </script>
+  </head>
+  <body>
+    <script type="image/svg+xml">
+      <svg width="400" height="400" onload="init()">
+        <text id='the text' y='30' font-size='50'>
+          text content
+        </text>
+      </svg>
+    </script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+/*
+ * $Id: common.css 131 2010-12-09 18:13:10Z s242720-studenti $
+ *
+ * Style rules for all the pages
+ */
+
+body{
+    font-family: helvetica, sans-serif;
+    font-size: 11px;
+    margin: 0px;
+}
+
+.hidden{display: none;}
+.inline{display: inline;}
+/* An invalid input field */
+.invalid{color: red;}
+
+div#name_panel
+{
+    height: 20px;
+}
+
+/* The classes with _s_ are subject to style change */
+div.container_div_s_default{
+    background: #dedfdf;
+    padding: 10px;
+    border: 1px solid black;
+    /* Rounded corners for all browsers but IE */
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -khtml-border-radius: 20px;
+    border-radius: 20px;
+}
+div.container_div_s_facebook{
+    background: #526ea6;
+    padding: 10px;
+    border: 1px solid black;
+}
+div.container_div_s_msn {
+    background: lightGreen;
+    padding: 10px;
+    /* Rounded corners for all browsers but IE */
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+}

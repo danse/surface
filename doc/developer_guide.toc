@@ -1,0 +1,72 @@
+\select@language {english}
+\contentsline {chapter}{\numberline {1}Main principle}{5}{chapter.1}
+\contentsline {section}{\numberline {1.1}Elements involved}{6}{section.1.1}
+\contentsline {section}{\numberline {1.2}Server \texttt {mode} parameter}{6}{section.1.2}
+\contentsline {section}{\numberline {1.3}Principal division of the application}{7}{section.1.3}
+\contentsline {chapter}{\numberline {2}Code structure}{9}{chapter.2}
+\contentsline {section}{\numberline {2.1}Client side}{9}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Dispatching the execution flow through the files}{11}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Object implementation on the client side}{12}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}The channel class}{12}{subsection.2.1.3}
+\contentsline {subsubsection}{Client send buffer and the \texttt {sender} object}{14}{section*.2}
+\contentsline {subsubsection}{Handling of AJAX errors}{14}{section*.3}
+\contentsline {subsubsection}{The deletion of a whiteboard on the client side}{15}{section*.4}
+\contentsline {subsection}{\numberline {2.1.4}The shape class}{15}{subsection.2.1.4}
+\contentsline {subsubsection}{Random remarks on the structure of the shape class}{18}{section*.5}
+\contentsline {subsection}{\numberline {2.1.5}Concurrency}{18}{subsection.2.1.5}
+\contentsline {section}{\numberline {2.2}Server side}{18}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}The main switch}{18}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Function groups and server side files}{18}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Steps for the server response}{19}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}The client identifier}{19}{subsection.2.2.4}
+\contentsline {subsection}{\numberline {2.2.5}Export mode and draw{\_}image}{20}{subsection.2.2.5}
+\contentsline {subsection}{\numberline {2.2.6}Concurrency}{20}{subsection.2.2.6}
+\contentsline {subsubsection}{File get and put}{21}{section*.6}
+\contentsline {subsubsection}{Protected file create and exists}{21}{section*.7}
+\contentsline {subsubsection}{Whiteboard existence and automatic logout}{21}{section*.8}
+\contentsline {subsubsection}{Permission file access}{21}{section*.9}
+\contentsline {section}{\numberline {2.3}Emulating a client \emph {push} behavior with the http technology}{22}{section.2.3}
+\contentsline {section}{\numberline {2.4}Global variables directly sent from the server to the client}{22}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Role of \texttt {build{\_}user{\_}vars}}{23}{subsection.2.4.1}
+\contentsline {section}{\numberline {2.5}Global and local measure units}{23}{section.2.5}
+\contentsline {section}{\numberline {2.6}Security measures}{24}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Request signature}{24}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}Reply attack}{25}{subsection.2.6.2}
+\contentsline {section}{\numberline {2.7}Timeout effects}{25}{section.2.7}
+\contentsline {subsection}{\numberline {2.7.1}Sender requests and the \texttt {send{\_}id}}{25}{subsection.2.7.1}
+\contentsline {section}{\numberline {2.8}Parametric layout}{25}{section.2.8}
+\contentsline {chapter}{\numberline {3}Data structures}{27}{chapter.3}
+\contentsline {section}{\numberline {3.1}Stored data}{27}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Whiteboard database}{29}{subsection.3.1.1}
+\contentsline {subsubsection}{serialize and json{\_}encode}{30}{section*.10}
+\contentsline {subsection}{\numberline {3.1.2}Permission file}{30}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Password file}{31}{subsection.3.1.3}
+\contentsline {section}{\numberline {3.2}Joined arrays}{31}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Object id}{32}{subsection.3.2.1}
+\contentsline {subsubsection}{Server object id}{33}{section*.11}
+\contentsline {subsection}{\numberline {3.2.2}Action parameters}{33}{subsection.3.2.2}
+\contentsline {subsubsection}{Shape action}{33}{section*.12}
+\contentsline {subsubsection}{Other actions}{33}{section*.13}
+\contentsline {subsection}{\numberline {3.2.3}Drawbacks and alternatives to the use of joined arrays}{34}{subsection.3.2.3}
+\contentsline {subsubsection}{Joined arrays for the update structure}{34}{section*.14}
+\contentsline {subsubsection}{Joined arrays for the action parameters}{35}{section*.15}
+\contentsline {chapter}{\numberline {4}Specific solutions and workarounds}{37}{chapter.4}
+\contentsline {section}{\numberline {4.1}Use of svgweb}{37}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Generic notes}{37}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Image and anchor support}{37}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Resize the SVG root node}{38}{subsection.4.1.3}
+\contentsline {section}{\numberline {4.2}Coordinates within the svg canvas}{38}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Browser behavior for svg offset}{39}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Browser behavior for scroll state}{39}{subsection.4.2.2}
+\contentsline {chapter}{\numberline {5}Testing environment and methods}{41}{chapter.5}
+\contentsline {section}{\numberline {5.1}Browsers}{41}{section.5.1}
+\contentsline {section}{\numberline {5.2}Debugging Javascript in Explorer}{41}{section.5.2}
+\contentsline {section}{\numberline {5.3}Hardware}{42}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Performance problems}{42}{subsection.5.3.1}
+\contentsline {chapter}{\numberline {6}Directions for further development}{43}{chapter.6}
+\contentsline {section}{\numberline {6.1}Prepare for HTML5}{43}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}The canvas element}{43}{subsection.6.1.1}
+\contentsline {section}{\numberline {6.2}Administration panel}{44}{section.6.2}
+\contentsline {section}{\numberline {6.3}Execution of the whiteboard as a CGI}{44}{section.6.3}
+\contentsline {chapter}{\numberline {7}Web resources}{45}{chapter.7}
+\contentsline {chapter}{\numberline {8}Notes}{47}{chapter.8}

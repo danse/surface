@@ -1,0 +1,204 @@
+/* $Id: application.css 132 2010-12-13 10:53:17Z s242720-studenti $ */
+
+/* The classes with _s_ are subject to style change (when the user
+  clicks on the icon) */
+
+/****************************************************************
+ * Application
+ ****************************************************************/
+
+/* for the forms into the "menu bar" */
+form{display:inline}
+
+/* For the style icons */
+img.skin
+{
+    margin-left:  5px;
+    margin-right: 5px;
+    width: 20px;
+    heigth: 20px;
+}
+.img_selected_s_default{border:1px solid #000000;}
+.img_selected_s_facebook{border:1px solid #ffffff;}
+.img_selected_s_msn{border:1px dashed #dffffa;}
+
+/* for the iframe shown into the 'slides' box */
+iframe#slides_frame{border: 1px solid black}
+
+/* Resize panels which users can drag */
+
+div#vertical_separator{
+    width:10px;
+    height:'.$content_h.'px;
+    float:left;
+    cursor:ew-resize;
+    border:1px dashed gray;
+}
+
+div#horizontal_separator{
+    height: 10px;
+    cursor:ns-resize;
+    border:1px dashed gray;
+}
+
+/*
+ * Movable elements that act as user interface when the user has to
+ * change layout sizes
+ */
+
+div#frame_size{
+    border: 5px dashed navy;
+    background-color: transparent;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+div#vertical_size{
+    border-left: 10px solid navy;
+    position: absolute;
+}
+
+/****************************************************************
+ * Whiteboard
+ ****************************************************************/
+
+/* This div exists because of explorer, that with svgweb can't apply
+style rules directly to the <svg> tag. On the other side, with firefox
+native renderer it is not enough to apply "float:left" here, so we
+will need both "float:left" here and "float:right" on the toolbox div */
+div#svg_container {float: left;}
+
+div#toolbox{
+    float:left;
+    background:white;
+}
+
+.draw_button {
+    width: 100%;
+}
+
+.draw_button_pushed {
+    width: 100%;
+    /*border: 2px dotted white;*/
+    background: white;
+    border: none;
+}
+
+.draw_button_special {
+    width: 100%;
+    /*border: 2px dotted orange;*/
+    background: orange;
+    border: none;
+}
+
+.draw_button_little {width: 28%;}
+
+textarea#textinput{
+    overflow: auto;
+    display: none; 
+    left: 200px;
+    top: 200px;
+    position: absolute;
+    z-index: 1; 
+}
+
+div.color_table {margin:2px}
+
+div.color_selected {margin:2px}
+
+div.color_sample{
+    display: inline-block;
+    /* The zoom and the modified display property
+       are intended to achieve an inline-block align
+       with explorer */
+    zoom: 1;
+    *display: inline;
+    width: 15px;
+    height: 15px;
+    border: 1px solid;
+}
+      
+div.color_default {background:#000000}
+div.color_000000 {background:#000000}
+div.color_FFFFFF {background:#FFFFFF}
+div.color_A020F0 {background:#A020F0}
+div.color_0000CD {background:#0000CD}
+div.color_00FFFF {background:#00FFFF}
+div.color_49E20E {background:#49E20E}
+div.color_FF0000 {background:#FF0000}
+div.color_FF8000 {background:#FF8000}
+div.color_EEEE00 {background:#EEEE00}
+div.color_FF1CAE {background:#FF1CAE}
+
+/****************************************************************
+ * Chat
+ ****************************************************************/
+
+div#text_output
+{
+    overflow:auto;
+    background-color:white;
+}
+textarea#text_input_t
+{
+    overflow: auto;
+    border: none;
+    padding: 2px;
+    font-size:11px;
+}
+font
+{
+    font-family: "Tahoma", "Verdana", "Arial", serif;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 0px;
+    margin: 2px 5px 0px 0px;
+}
+hr
+{
+    /*width: 100%;*/
+    height: 1px;
+    color: #dedfdf;
+    padding: 0px;
+    margin: 4px 1px 4px 1px;
+}
+p
+{
+    font-family: "Tahoma", "Verdana", "Arial", serif;
+    font-size: 11px;
+    padding: 2px 5px 0px 5px;
+    margin: 0px;
+}
+
+/* The style of an unconfirmed message */
+
+.div_from_me_s_unconfirmed{}
+.div_from_s_unconfirmed{}
+.div_date_s_unconfirmed{}
+.div_text_s_unconfirmed{}
+.hr_s_unconfirmed{display:none;}
+.div_message_s_unconfirmed{color:gray; padding:7px;}
+
+/* These are the styles applied clicking on the icons */
+
+.div_from_me_s_default{color:#912222; font-size:12px; float:left;}
+.div_from_s_default{color:#4f52b8; font-size:12px; float:left;}
+.div_date_s_default{float:right;}
+.div_text_s_default{clear:both;}
+.hr_s_default{height:1px;}
+.div_message_s_default{padding:7px;}
+
+.div_from_me_s_facebook{color:#777777; float:left;}
+.div_from_s_facebook{color:#3B5998; float:left;}
+.div_date_s_facebook{color:#a8a7ae; font-size:9px; float:right;}
+.div_text_s_facebook{clear:both;}
+.hr_s_facebook{color:#a8a7ae; background:#a8a7ae;}
+.div_message_s_facebook{font-family:'Times New Roman';}
+
+.div_from_me_s_msn{color: #00000F; float:left;}
+.div_from_s_msn{color: #00000F; float:left;}
+.div_date_s_msn{color:#a8a7ae; font-size:9px; float:right;}
+.div_text_s_msn{clear:both;}
+.hr_s_msn{display:none;}
+.div_message_s_msn{padding:7px; font-family: 'Comic Sans MS';}

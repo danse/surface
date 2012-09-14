@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>doubled text test case</title>
+    <script type="text/javascript" src="svg.js"></script>
+    <script type="text/javascript">
+
+      function init(){
+        svg = document.getElementsByTagNameNS(svgns, "svg").item(0);
+        var tspan = document.createElementNS(svgns, "tspan");
+        var text = document.createElementNS(svgns, "text");
+        text.setAttribute('fill', 'red');
+        text.setAttribute('font-size', '20');
+        text.setAttribute('x', '20');
+        text.setAttribute('y', '20');
+        text.setAttribute('font-family', 'Arial');
+        var content = document.createTextNode("Doubled Text",true);
+        tspan.appendChild(content);
+        tspan.setAttribute('y', '30');
+        text.appendChild(tspan);
+        svg.appendChild(text);
+        console.log('init function accomplished');
+      }
+    </script>
+  </head>
+  <body>
+    <script type="image/svg+xml">
+      <svg width="400" height="400" onload="init()">
+      </svg>
+    </script>
+  </body>
+</html>

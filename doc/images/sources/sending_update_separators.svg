@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="970"
+   height="540"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.47pre4 r22446"
+   sodipodi:docname="sending_update_separators.svg"
+   inkscape:export-filename="/home/francesco/public/tesi/doc/images/sending_update_separators.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lend"
+       style="overflow:visible">
+      <path
+         id="path3631"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)" />
+    </marker>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+    <inkscape:perspective
+       id="perspective4097"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lend-5"
+       style="overflow:visible">
+      <path
+         id="path3631-1"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker4103"
+       style="overflow:visible">
+      <path
+         id="path4105"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)" />
+    </marker>
+    <inkscape:perspective
+       id="perspective4201"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4223"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective2871"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective2881"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective2906"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3680"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3705"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lend-8"
+       style="overflow:visible">
+      <path
+         id="path3631-4"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 z"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;marker-start:none"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)" />
+    </marker>
+    <inkscape:perspective
+       id="perspective3847"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="474.36112"
+     inkscape:cy="260.90511"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1400"
+     inkscape:window-height="976"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     showborder="true" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(138.97759,-253.93228)">
+    <text
+       xml:space="preserve"
+       style="font-size:15.20960522px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
+       x="4.000751"
+       y="354.23563"
+       id="text2820"><tspan
+         sodipodi:role="line"
+         id="tspan2822"
+         x="4.000751"
+         y="354.23563">client_id= ___ &amp; user = ___ &amp; mode = ___ &amp; lines = ___ &amp; data = ___</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:15.20960522px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
+       x="323.5798"
+       y="437.8309"
+       id="text2824"><tspan
+         sodipodi:role="line"
+         id="tspan2826"
+         x="323.5798"
+         y="437.8309">line ; line ; line ; line</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:15.20960522px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
+       x="200.19989"
+       y="519.99976"
+       id="text2828"><tspan
+         sodipodi:role="line"
+         id="tspan2830"
+         x="200.19989"
+         y="519.99976">g_page : varidObj : type : parameters</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:15.20960522px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
+       x="261.8963"
+       y="625.73279"
+       id="text2832"><tspan
+         sodipodi:role="line"
+         id="tspan2834"
+         x="261.8963"
+         y="625.73279">parameter | parameter | parameter</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.26746714px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 325.81421,421.65279 441.80072,360.75987"
+       id="path2836" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.26746714px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 474.2731,360.75987 -10,61.61784"
+       id="path2838"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.26746714px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 202.57855,507.19284 439.62597,445.57501"
+       id="path2840" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.26746714px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 464.2731,445.57501 0,62.34275"
+       id="path2844" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.26746714px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 374.21814,525.18923 -111.36612,83.7723"
+       id="path2846"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.26746714px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 457.45209,526.08443 49.53188,85.60356"
+       id="path2848"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:15.20960522px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#008080;fill-opacity:1;stroke:none;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
+       x="-123.92428"
+       y="552.13763"
+       id="text2829"><tspan
+         sodipodi:role="line"
+         x="-123.92428"
+         y="552.13763"
+         id="tspan3666">sender_add</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:15.20960522px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#008080;fill-opacity:1;stroke:none;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
+       x="-127.29594"
+       y="437.8309"
+       id="text2833"><tspan
+         sodipodi:role="line"
+         id="tspan2835"
+         x="-127.29594"
+         y="437.8309">sender_send</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="color:#000000;fill:none;stroke:#cccccc;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="path2843"
+       sodipodi:cx="593.67413"
+       sodipodi:cy="455.25641"
+       sodipodi:rx="32.600605"
+       sodipodi:ry="44.03941"
+       d="m 593.67413,411.217 c 18.00482,0 32.60061,19.71712 32.60061,44.03941 0,24.32229 -14.59579,44.03941 -32.60061,44.03941"
+       sodipodi:start="4.712389"
+       sodipodi:end="7.8539816"
+       transform="matrix(-1.4757967,0,0,-1.4757967,883.4229,1230.933)"
+       sodipodi:open="true" />
+    <path
+       sodipodi:nodetypes="cc"
+       id="path4083"
+       d="m -83.755589,646.01193 0,-72.49157"
+       style="fill:#999999;stroke:#999999;stroke-width:1.26746714px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend)" />
+    <path
+       sodipodi:nodetypes="cc"
+       id="path4085"
+       d="m -83.755589,524.92846 0,-71.49157"
+       style="fill:#999999;stroke:#999999;stroke-width:1.26746714px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend)" />
+    <path
+       style="fill:#999999;stroke:#999999;stroke-width:1.26746714px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
+       d="m -83.755589,334.04565 0,-52.49156"
+       id="path2851"
+       sodipodi:nodetypes="cc" />
+    <g
+       id="g4153"
+       transform="matrix(1.2674671,0,0,1.2674671,-28.814291,-132.84558)">
+      <text
+         id="text2847"
+         y="682.89221"
+         x="174.98871"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
+         xml:space="preserve"><tspan
+           y="682.89221"
+           x="174.98871"
+           sodipodi:role="line"
+           id="tspan3670">Javascript functions defined in application.js</tspan></text>
+      <rect
+         y="674.30957"
+         x="136.69376"
+         height="10.866868"
+         width="28.02508"
+         id="rect4087"
+         style="color:#000000;fill:#008080;fill-opacity:1;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    </g>
+    <path
+       style="fill:#999999;stroke:#999999;stroke-width:0.98411059px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
+       d="m 759.06793,496.54342 0,116.62921"
+       id="path4174"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="cc"
+       id="path4085-6"
+       d="m 759.06793,370.44304 0,77.32808"
+       style="fill:#999999;stroke:#999999;stroke-width:1.26746714px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend)" />
+    <text
+       xml:space="preserve"
+       style="font-size:15.20960522px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ff6600;fill-opacity:1;stroke:none;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
+       x="620.97791"
+       y="320.50824"
+       id="text4145"><tspan
+         sodipodi:role="line"
+         id="tspan4147"
+         x="620.97791"
+         y="320.50824">XML</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:15.20960522px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#008080;fill-opacity:1;stroke:none;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
+       x="700.52393"
+       y="475.38028"
+       id="text4149"><tspan
+         sodipodi:role="line"
+         id="tspan4151"
+         x="700.52393"
+         y="475.38028">receiver_handler</tspan></text>
+    <path
+       transform="matrix(1.253371,0,0,-2.3796331,-118.10761,1520.9696)"
+       sodipodi:end="7.8539816"
+       sodipodi:start="4.712389"
+       d="m 593.67413,411.217 c 18.00482,0 32.60061,19.71712 32.60061,44.03941 0,24.32229 -14.59579,44.03941 -32.60061,44.03941"
+       sodipodi:ry="44.03941"
+       sodipodi:rx="32.600605"
+       sodipodi:cy="455.25641"
+       sodipodi:cx="593.67413"
+       id="path2845-8"
+       style="color:#000000;fill:none;stroke:#ff6600;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       sodipodi:type="arc"
+       sodipodi:open="true" />
+    <text
+       xml:space="preserve"
+       style="font-size:25.34934235px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#8080ff;fill-opacity:1;stroke:none;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
+       x="309.6467"
+       y="698.32477"
+       id="text2885"><tspan
+         sodipodi:role="line"
+         id="tspan2887"
+         x="309.6467"
+         y="698.32477">Client</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:25.34934235px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#8080ff;fill-opacity:1;stroke:none;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
+       x="307.96494"
+       y="278.27518"
+       id="text2889"><tspan
+         sodipodi:role="line"
+         id="tspan2891"
+         x="307.96494"
+         y="278.27518">Server</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:15.20960522px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
+       x="17.234234"
+       y="625.73279"
+       id="text2880"><tspan
+         sodipodi:role="line"
+         id="tspan2882"
+         x="17.234234"
+         y="625.73279">userid _ sessionid _ counter</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.26746714px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 259.17803,527.09881 19.28461,607.66031"
+       id="path2884"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.26746714px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 320.53805,528.09881 -107.2667,83.68743"
+       id="path2886"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:15.20960522px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ff6600;fill-opacity:1;stroke:none;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
+       x="460.79709"
+       y="520.7019"
+       id="text2828-0"><tspan
+         sodipodi:role="line"
+         id="tspan2830-9"
+         x="460.79709"
+         y="520.7019">: madeBy : time : upd_id</tspan></text>
+    <g
+       id="g3729"
+       transform="translate(71.544038,-54.725111)">
+      <text
+         id="text2847-0"
+         y="818.99622"
+         x="122.06783"
+         style="font-size:15.20960522px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
+         xml:space="preserve"><tspan
+           y="818.99622"
+           x="122.06783"
+           id="tspan2849-6"
+           sodipodi:role="line">as returned from the server, with some datas added</tspan><tspan
+           id="tspan3725"
+           y="838.00824"
+           x="122.06783"
+           sodipodi:role="line">and in XML form, except for parameters</tspan></text>
+      <rect
+         y="808.11804"
+         x="73.530243"
+         height="13.773397"
+         width="35.520866"
+         id="rect4087-4"
+         style="color:#000000;fill:#ff6600;fill-opacity:1;stroke:#ff9b59;stroke-width:1.26746714;stroke-opacity:0.09019608;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:15.20960522px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#008080;fill-opacity:1;stroke:none;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
+       x="-129.61267"
+       y="354.23563"
+       id="text2833-3"><tspan
+         sodipodi:role="line"
+         id="tspan2835-8"
+         x="-129.61267"
+         y="354.23563">channel.send</tspan></text>
+    <path
+       style="fill:#999999;stroke:#999999;stroke-width:1.26746714px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
+       d="m -83.755589,419.88285 0,-58.49156"
+       id="path2851-3"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:15.20960522px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#008080;fill-opacity:1;stroke:none;font-family:URW Palladio L;-inkscape-font-specification:URW Palladio L Medium"
+       x="700.52631"
+       y="356.45712"
+       id="text4149-1"><tspan
+         sodipodi:role="line"
+         id="tspan4151-5"
+         x="700.52631"
+         y="356.45712">channel.received</tspan></text>
+  </g>
+</svg>
